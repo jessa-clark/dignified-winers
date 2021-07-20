@@ -48,5 +48,5 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 |July 27| Advanced CSS / final touches / POST MVP completion | To Do
 |July 28| Presentations | To Do
 
-
-
+## Team Expectations
+https://docs.google.com/document/d/1ee0V10DEkYuLS7H1FjRJtzc83KB6YiY0dVdLRAJh5hY/edit?usp=sharing
