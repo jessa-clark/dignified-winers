@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import User from "../models/user";
+import User from "../models/user.js";
 
 //to further secure encryption
 const SALT_ROUNDS = process.env.SALT_ROUNDS || 11;
