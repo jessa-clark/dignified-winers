@@ -15,10 +15,12 @@ const api = axios.create({
 })
 
 //grabs the request before sent and attaches the header with Bearer token.
-api.interceptors.request.use(async function (config) {
+api.interceptors.request.use(async (config) => {
   config.headers['Authorization'] = await getToken()
   return config
-}, function (error) {
+}, (error) => {
   console.log('Request error: ', error)
   return Promise.reject(error)
 });
+
+export default api
