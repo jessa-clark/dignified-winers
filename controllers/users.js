@@ -49,3 +49,37 @@ export const signUp = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+export const signIn = async (req, res) => {
+
+  try {
+    //retrieving email and password from request body
+    const { email, password } = req.body;
+    //defining a user with a matching email 
+    const user = await User.findOne({ email: email }).select(
+      "username email password_digest"
+    );
+    //if the user's inputted password is the same as the password saved on the database,
+    
+    if (await bcrypt.compare(password, user.password_digest)) {
+      //making a payload with the user's information
+      const payload = {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        exp: parseInt(exp.getTime() / 1000),
+      }; 
+      //using payload and token key to create the unique JWT token 
+      const token = jwt.sign(payload, TOKEN_KEY)
+      //if successful server will respond with user's token
+      res.status(201).json({ token })
+    } else {
+      //if not server will respond with invalid credentials
+      res.status(401).send("Invalid credentials in a string")
+    }
+  } catch (error) {
+    //if anything at all goes wrong, server will respond with appropriate error
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+};
