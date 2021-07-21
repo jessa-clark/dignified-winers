@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { verifyUser } from "./services/users";
+import { verify } from "./services/users";
 
 //components
 import AllWines from "./screens/AllWines/AllWines";
