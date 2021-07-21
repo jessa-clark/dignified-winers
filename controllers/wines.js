@@ -53,7 +53,7 @@ export const updateWine = async (req, res) => {
 export const deleteWine = async (req, res) => {
   try {
     const { id } = req.params;
-    const deleted = await Wine.findByIdAndUpdate(id);
+    const deleted = await Wine.findByIdAndDelete(id);
     if (deleted) {
       return res.status(200).send("Wine deleted!");
     }
