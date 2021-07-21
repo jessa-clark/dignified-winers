@@ -15,6 +15,7 @@ import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [toggleFetch, setToggleFetch] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -22,8 +23,7 @@ const App = () => {
       setUser(user ? user : null);
     };
     fetchUser();
-  }, []);
-
+  }, [toggleFetch]);
   return (
     <div className="App">
       <Switch>
@@ -32,7 +32,7 @@ const App = () => {
         </Route>
 
         <Route exact path="/sign-up">
-          <SignUp setUser={setUser} />
+          <SignUp setUser={setUser} setToggleFetch={setToggleFetch} />
         </Route>
 
         <Route exact path="/sign-out">
@@ -48,11 +48,11 @@ const App = () => {
         </Route>
 
         <Route exact path="/edit/:id">
-          {user ? <WineEdit user={user} /> : <Redirect to="/sign-up" />}
+          {verify() ? <WineEdit user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/add-wine">
-          {user ? <WineAdd user={user} /> : <Redirect to="/sign-up" />}
+          {verify() ? <WineAdd user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/wines/:id">
