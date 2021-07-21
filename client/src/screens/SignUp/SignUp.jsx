@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { signUp } from "../../services/users";
 
-const SignUp = () => {
+const SignUp = (props) => {
+  const history = useHistory();
+  const { setUser, setToggleFetch } = props;
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
@@ -15,7 +18,11 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signUp(newUser);
+    setUser(signUp(newUser));
+    setToggleFetch((curr) => !curr);
+    setTimeout(() => {
+      history.push("/");
+    }, 500);
   };
 
   return (
@@ -29,22 +36,30 @@ const SignUp = () => {
       </section>
       <section>
         <h3>Sign Up</h3>
-        <form onChange={handleChange} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="username">Username</label>
           <input
             type="text"
             name="username"
             id="username"
             value={newUser.username}
+            onChange={handleChange}
           />
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" value={newUser.email} />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={newUser.email}
+            onChange={handleChange}
+          />
           <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
             id="password"
             value={newUser.password}
+            onChange={handleChange}
           />
           <button type="submit">Submit</button>
         </form>
