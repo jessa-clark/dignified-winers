@@ -78,20 +78,25 @@ const WineAdd = (props) => {
         rows={10}
         placeholder='Description'
         value={wine.description}
-        name='descripition'
+        name='description'
         required
         autoFocus
         onChange={handleChange}
         />
-        <input
-        className='input-type'
+        <select
+        className='dropdown-type'
         placeholder='Type'
         value={wine.type}
         name='type'
         required
         autoFocus
         onChange={handleChange}
-        />
+        >
+          <option value="dropdown">Select Type</option>
+          <option value="red">red</option>
+          <option value="white">white</option>
+          <option value="specialty">specialty</option>
+        </select>
         <button type='submit' className='add-button'>
           Add Wine
         </button>
