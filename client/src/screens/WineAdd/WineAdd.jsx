@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './WineAdd.css'
-import { Layout } from '../../components'
+// import { Layout } from '../../components'
 import { Redirect } from 'react-router-dom'
 import { addWine } from '../../services/wines'
 
@@ -35,7 +35,7 @@ const WineAdd = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
+    // <Layout user={props.user}>
       <form className='create-form' onSubmit={handleSubmit}>
         <input
         className='input-name'
@@ -96,7 +96,7 @@ const WineAdd = (props) => {
           Add Wine
         </button>
       </form>
-    </Layout>
+    // </Layout>
   )
 }
 
