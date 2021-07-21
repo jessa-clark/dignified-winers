@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await verifyUser();
+      const user = await verify();
       setUser(user ? user : null);
     };
     fetchUser();
