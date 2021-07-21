@@ -83,3 +83,17 @@ export const signIn = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 };
+
+
+export const verify = async (req, res) => {
+  try {
+    const token = req.headers.authorization.split(" ")[1]
+    const payload = jwt.verify(token, TOKEN_KEY)
+    if (payload) {
+      res.json(payload)
+    }
+  } catch (error) {
+    console.log(error.message)
+    res.status(401).send("Not authorized")
+  }
+}
