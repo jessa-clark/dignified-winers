@@ -3,7 +3,7 @@
   height: 4rem;
   width: 100vw;
   justify-content: space-between;
-  /* position: fixed; */
+  position: fixed;
 
  background-color: beige;
 }
