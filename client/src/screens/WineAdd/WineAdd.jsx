@@ -48,7 +48,21 @@ const WineAdd = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
-      <form className="create-form" onSubmit={handleSubmit}>
+      <div className="add-image-container">
+        <img className="wine-image" src={wine.imgURL} alt={wine.name} />
+        <form onSubmit={handleSubmit}>
+          <input
+            className="input-image-link"
+            placeholder="Image Link"
+            value={wine.imgURL}
+            name="imgURL"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+        </form>
+      </div>
+      <form className="add-form" onSubmit={handleSubmit}>
         <input
           className="input-name"
           placeholder="Wine Name"
@@ -72,16 +86,6 @@ const WineAdd = (props) => {
           placeholder="Year"
           value={wine.year}
           name="year"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <img className="wine-image" src={wine.imgURL} alt={wine.name} />
-        <input
-          className="input-image-link"
-          placeholder="Image Link"
-          value={wine.imgURL}
-          name="imgURL"
           required
           autoFocus
           onChange={handleChange}
