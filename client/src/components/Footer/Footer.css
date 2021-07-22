@@ -19,6 +19,7 @@ color: white;
 .dev-logo-container > * {
   padding: 0 1rem;
   color: white;
+  text-decoration: none;
 }
 .dev-name {
   grid-area: name;
