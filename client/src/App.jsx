@@ -26,6 +26,10 @@ const App = () => {
     fetchUser();
   }, []);
 
+  useEffect(() => {
+    setSignedIn(user ? true : false);
+  }, [user]);
+
   return (
     <div className="App">
       <Switch>
