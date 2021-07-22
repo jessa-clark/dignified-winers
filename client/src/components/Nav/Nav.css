@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  height: 4rem;
+  width: 100vw;
+  justify-content: space-between;
+  /* position: fixed; */
+
+ background-color: beige;
+}
+
+.navbar-left-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right-container {
+  display: flex;
+  align-items: center;
+}
+.navbar-right-container > * {
+padding: 0.5rem;
+}
