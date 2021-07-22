@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Rahul Joshi</p>
         <div className="dev-logo-container">
-          <a href="https://www.linkedin.com/in/rahul-joshi-00/" target="_blank" className="linkedin-logo">
+          <a href="https://www.linkedin.com/in/rahul-joshi-00/" target="_blank" rel="noreferrer" className="linkedin-logo">
             <AiOutlineLinkedin size={50}/>
           </a>
-          <a href="https://github.com/rahulpjo" target="_blank" className="github-logo">
+          <a href="https://github.com/rahulpjo" target="_blank" rel="noreferrer" className="github-logo">
             <VscGithub size={45}/>
           </a>
         </div>
@@ -18,10 +18,10 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Maximiliani Carlson</p>
         <div className="dev-logo-container">
-          <a href="https://www.linkedin.com/in/maximiliana-c-66539149/" target="_blank" className="linkedin-logo">
+          <a href="https://www.linkedin.com/in/maximiliana-c-66539149/" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
           </a>
-          <a href="https://github.com/carlsonmr000" target="_blank" className="github-logo">
+          <a href="https://github.com/carlsonmr000" target="_blank" rel="noreferrer"className="github-logo">
           <VscGithub size={45}/>
           </a>
         </div>
@@ -29,10 +29,10 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Erick Manrique</p>
         <div className="dev-logo-container">
-          <a href="" target="_blank" className="linkedin-logo">
+          <a href="https://www.linkedin.com/in/erick-manrique/" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
           </a>
-          <a href="" target="_blank" className="github-logo">
+          <a href="https://github.com/yeezick" target="_blank" rel="noreferrer" className="github-logo">
           <VscGithub size={45}/>
           </a>
         </div>
@@ -40,10 +40,10 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Jessa Clark</p>
         <div className="dev-logo-container">
-          <a href="www.linkedin.com/in/jessa-clark" target="_blank" className="linkedin-logo">
+          <a href="www.linkedin.com/in/jessa-clark" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
           </a>
-          <a href="https://github.com/jessa-clark" target="_blank" className="github-logo">
+          <a href="https://github.com/jessa-clark" target="_blank" rel="noreferrer" className="github-logo">
           <VscGithub size={45}/>
           </a>
         </div>
