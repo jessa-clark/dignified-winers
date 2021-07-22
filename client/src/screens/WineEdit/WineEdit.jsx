@@ -118,7 +118,7 @@ const WineEdit = (props) => {
           </button>
         </form>
       </div>
-    // </Layout>
+    </Layout>
   );
 };
 
