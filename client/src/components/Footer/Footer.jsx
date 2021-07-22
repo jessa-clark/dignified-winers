@@ -1,5 +1,5 @@
-import {AiOutlineLinkedin} from "react-icons/ai";
-import {VscGithub} from "react-icons/vsc";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { VscGithub } from "react-icons/vsc";
 import "./Footer.css";
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="dev-container">
-        <p className="dev-name">Maximiliani Carlson</p>
+        <p className="dev-name">Maximiliana Carlson</p>
         <div className="dev-logo-container">
           <a href="https://www.linkedin.com/in/maximiliana-c-66539149/" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
