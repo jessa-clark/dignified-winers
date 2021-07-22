@@ -5,12 +5,13 @@
   justify-content: space-between;
   position: fixed;
 
- background-color: beige;
+  background-color: black;
 }
 
 .navbar-left-container {
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .navbar-right-container {
@@ -18,5 +19,6 @@
   align-items: center;
 }
 .navbar-right-container > * {
-padding: 0.5rem;
+  padding: 0.5rem;
+  color: white;
 }

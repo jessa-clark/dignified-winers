@@ -5,10 +5,8 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-left-container">
-        {/* <div className="navbar-left-container"> */}
-          <p>image</p>
-          <h1>Diversified Winers</h1>
-        {/* </div> */}
+        <p>image</p>
+        <h1>Diversified Winers</h1>
       </Link>
       <div className="navbar-right-container">
         <Link to="/">Home</Link>
