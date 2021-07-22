@@ -3,7 +3,7 @@ import "./WineEdit.css";
 import { useParams, Redirect } from "react-router";
 import Layout from "../../components/Layout/Layout";
 import { getOneWine, editWine } from "../../services/wines";
-
+import { verify } from "../../services/users";
 
 const WineEdit = (props) => {
   const [wine, setWine] = useState({
@@ -16,16 +16,21 @@ const WineEdit = (props) => {
   });
 
   const [isUpdated, setUpdated] = useState(false);
+  const [userBool, setUserBool] = useState(null);
   let { id } = useParams();
-
 
   useEffect(() => {
     const fetchWine = async () => {
       const wine = await getOneWine(id);
       setWine(wine);
     };
+    const checkUser = async () => {
+      const userExists = await verify();
+      setUserBool(userExists ? true : false);
+    };
+    checkUser();
     fetchWine();
-  }, [id]);
+  }, [id, userBool]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -45,7 +50,9 @@ const WineEdit = (props) => {
     return <Redirect to={`/wines/${id}`} />;
   }
 
-  return (
+  return !userBool && userBool !== null ? (
+    <Redirect to="/sign-up" />
+  ) : (
     <Layout user={props.user}>
       <div className="wine-edit">
         <div className="image-container">

@@ -21,13 +21,14 @@ const App = () => {
     const fetchUser = async () => {
       const user = await verify();
       setUser(user ? user : null);
-      setSignedIn(user ? true : false);
     };
     fetchUser();
   }, []);
 
   useEffect(() => {
-    setSignedIn(user ? true : false);
+    setTimeout(() => {
+      setSignedIn(user ? true : false);
+    }, 500);
   }, [user]);
 
   return (
@@ -54,11 +55,11 @@ const App = () => {
         </Route>
 
         <Route exact path="/edit/:id">
-          {signedIn ? <WineEdit user={user} /> : <Redirect to="/sign-up" />}
+          <WineEdit user={user} />
         </Route>
 
         <Route exact path="/add-wine">
-          {signedIn ? <WineAdd user={user} /> : <Redirect to="/sign-up" />}
+          <WineAdd user={user} />
         </Route>
 
         <Route exact path="/wines/:id">
