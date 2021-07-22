@@ -58,8 +58,8 @@ const WineDetail = (props) => {
           <div>
             <h1>Related Wines</h1>
             <div className="all-wines">
-        {wines.length ? (
-          wines.map((wine) => <Wine key={wine._id} wine={wine} />)
+        {wines?.length ? (
+          [...wines].splice(0,4).map((wine) => <Wine key={wine._id} wine={wine} />)
         ) : (
           <h2>Loading...</h2>
         )}
