@@ -3,10 +3,12 @@ import bcrypt from "bcrypt";
 import User from "../models/user.js";
 
 //to further secure encryption
-const SALT_ROUNDS = process.env.SALT_ROUNDS || 11;
+const SALT_ROUNDS = Number(process.env.SALT_ROUNDS) || 11;
 
 //for jwt signature verification
-const TOKEN_KEY = process.env.TOKEN_KEY || "themostamazingestkey";
+const TOKEN_KEY = 
+process.env.NODE_ENV === "production" ?
+process.env.TOKEN_KEY : "themostamazingestkey";
 
 //for jwt expiration
 const today = new Date();
