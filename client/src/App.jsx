@@ -15,15 +15,17 @@ import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState(null);
-  const [toggleFetch, setToggleFetch] = useState(true);
+  const [signedIn, setSignedIn] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verify();
       setUser(user ? user : null);
+      setSignedIn(user ? true : false);
     };
     fetchUser();
-  }, [toggleFetch]);
+  }, []);
+
   return (
     <div className="App">
       <Switch>
@@ -32,7 +34,7 @@ const App = () => {
         </Route>
 
         <Route exact path="/sign-up">
-          <SignUp setUser={setUser} setToggleFetch={setToggleFetch} />
+          <SignUp setUser={setUser} />
         </Route>
 
         <Route exact path="/sign-out">
@@ -48,11 +50,11 @@ const App = () => {
         </Route>
 
         <Route exact path="/edit/:id">
-          {verify() ? <WineEdit user={user} /> : <Redirect to="/sign-up" />}
+          {signedIn ? <WineEdit user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/add-wine">
-          {verify() ? <WineAdd user={user} /> : <Redirect to="/sign-up" />}
+          {signedIn ? <WineAdd user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/wines/:id">
