@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import { signIn } from "../../services/users";
+import "./SignIn.css";
 
 const SignIn = (props) => {
   const history = useHistory();
@@ -30,11 +31,11 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-      <section>
+      <section className="sign-in-screen-text">
         <h2>Welcome back, Winer!</h2>
       </section>
-      <section>
-        <h3>Sign Up</h3>
+      <section className="sign-in-screen-form">
+        <h3>Sign In</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input
@@ -52,8 +53,13 @@ const SignIn = (props) => {
             value={returnUser.password}
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          <button type="submit">
+            <h3>Submit</h3>
+          </button>
         </form>
+        <p>
+          Don't have an account? <Link to="sign-up">Sign up</Link>
+        </p>
       </section>
     </Layout>
   );

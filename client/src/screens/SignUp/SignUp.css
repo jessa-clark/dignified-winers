@@ -1,0 +1,31 @@
+.sign-up-screen-text,
+.sign-up-screen-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.sign-up-screen-form {
+  background-color: rgba(255, 255, 255, 0.475);
+  background-blend-mode: lighten;
+}
+
+.sign-up-screen-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.sign-up-screen-form button {
+  background-color: #8c0d17;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+}
