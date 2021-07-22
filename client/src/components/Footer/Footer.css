@@ -1,6 +1,28 @@
 .footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items:center;
   height: 6rem;
+}
+.dev-container {
+display: flex;
+flex-direction: column;
+width: 25vw;
+justify-content: space-evenly;
+color: white;
+}
+.dev-logo-container {
+  display: flex;
+  justify-content:center;
+  flex-flow: row wrap;
+}
+.dev-logo-container > * {
+  padding: 0 1rem;
+  color: white;
+}
+.dev-name {
+  grid-area: name;
+  padding: 1rem 0;
+
+  text-align:center;
 }
