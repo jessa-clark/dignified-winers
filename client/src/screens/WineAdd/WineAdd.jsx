@@ -48,76 +48,74 @@ const WineAdd = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
-      <div className="add-image-container">
-        <img className="wine-image" src={wine.imgURL} alt={wine.name} />
-        <form onSubmit={handleSubmit}>
+      <div className="add-form-container">
+        <div className="add-image-container">
+          <img className="wine-image" src={wine.imgURL} alt={wine.name} />
+          <label className="wine-description-label">About the Wine</label>
+          <input
+            className="textarea-description"
+            value={wine.description}
+            name="description"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+        </div>
+        <form className="add-form" onSubmit={handleSubmit}>
+          <label className="wine-name-label">Wine Name</label>
+          <input
+            className="input-name"
+            value={wine.name}
+            name="name"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          <label className="vineyard-name-label">Vineyard</label>
+          <input
+            className="input-vineyard"
+            value={wine.vineyard}
+            name="vineyard"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          <label className="year-label">Year</label>
+          <input
+            className="input-year"
+            value={wine.year}
+            name="year"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          <label className="image-link-label">Image Link</label>
           <input
             className="input-image-link"
-            placeholder="Image Link"
             value={wine.imgURL}
             name="imgURL"
             required
             autoFocus
             onChange={handleChange}
           />
+          <select
+            className="dropdown-type"
+            value={wine.type}
+            name="type"
+            required
+            autoFocus
+            onChange={handleChange}
+          >
+            <option value="dropdown">Select Type</option>
+            <option value="red">red</option>
+            <option value="white">white</option>
+            <option value="specialty">specialty</option>
+          </select>
+          <button type="submit" className="add-button">
+            Add Wine
+          </button>
         </form>
       </div>
-      <form className="add-form" onSubmit={handleSubmit}>
-        <input
-          className="input-name"
-          placeholder="Wine Name"
-          value={wine.name}
-          name="name"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="input-vineyard"
-          placeholder="Vineyard Name"
-          value={wine.vineyard}
-          name="vineyard"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="input-year"
-          placeholder="Year"
-          value={wine.year}
-          name="year"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="textarea-description"
-          rows={10}
-          placeholder="Description"
-          value={wine.description}
-          name="description"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <select
-          className="dropdown-type"
-          placeholder="Type"
-          value={wine.type}
-          name="type"
-          required
-          autoFocus
-          onChange={handleChange}
-        >
-          <option value="dropdown">Select Type</option>
-          <option value="red">red</option>
-          <option value="white">white</option>
-          <option value="specialty">specialty</option>
-        </select>
-        <button type="submit" className="add-button">
-          Add Wine
-        </button>
-      </form>
     </Layout>
   );
 };

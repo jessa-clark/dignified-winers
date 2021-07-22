@@ -1,0 +1,70 @@
+/* body {
+    background-color: #400101;;
+} */
+
+/* convert pxs to vh and vw */
+
+.wine-detail-image {
+position: absolute;
+width: 471px;
+height: 436px;
+left: 158px;
+top: 230px;
+
+}
+
+.name {
+    position: absolute;
+width: 534px;
+height: 116px;
+left: 698px;
+top: 177px;
+
+font-family: Lustria;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 64px;
+
+color: #FFFFFF;
+
+}
+
+.vineyard {
+
+position: absolute;
+width: 465px;
+height: 31px;
+left: 698px;
+top: 262px;
+
+font-family: Lustria;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 31px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+.year {
+
+position: absolute;
+width: 51px;
+height: 31px;
+left: 698px;
+top: 316px;
+
+font-family: Lustria;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 31px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}

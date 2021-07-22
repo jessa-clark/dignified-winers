@@ -1,4 +1,69 @@
-.home-container {
+/* landing */
+.landing-section {
   height: 90vh;
-  background-color: palegreen;
+  position: relative;
+  
+  background: url("./HomeBanner.jpeg") no-repeat center;
+  background-size: cover;
 }
+.landing-greeting {
+position: absolute;
+left: 60%;
+top: 25%;
+width: 23vw;
+}
+.landing-text {
+color: white;
+font-size: 3rem;
+}
+ .landing-button {
+   height: 3rem;
+   width: 15rem;
+   padding-left: 0.75rem;
+
+   color: #8C0D17;
+   border: none;
+   font-size: 1.5rem;
+   text-align: left;
+   background-color: transparent;
+ }
+ .landing-button:hover {
+   border-radius: 2px;
+   background-color: #8c0d17;
+   color: #e5e5e5;
+   transition: 0.5s;
+ }
+
+ /* who */
+ .who-section {
+   height: 90vh;
+   margin-top: 8rem;
+ }
+ .who-container {
+   display: flex;
+  width: 90vw;
+ }
+ .who-image {
+  width: 20rem;
+ }
+ .who-content {
+  color: white;
+  padding-left: 2rem;
+ }
+ .who-content-title {
+font-size: 2rem;
+ }
+ .who-content-text {
+  font-size: 1.3rem;
+ }
+
+ /* winner */
+ .winner-wines-container {
+color: white;
+ } 
+.winner-wines-title {
+
+ }
+ .winner-wines-text {
+
+ }
