@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { signUp } from "../../services/users";
 import Layout from "../../components/Layout/Layout";
 import "./SignUp.css";
@@ -33,7 +33,7 @@ const SignUp = (props) => {
   return (
     <Layout>
       <section className="sign-up-screen-text">
-        <h2>There’s nothing wrong with wining every now &#38; then..</h2>
+        <h2>There’s nothing wrong with wining every now &#38; then...</h2>
         <p>
           Sign up today for exclusive access to our wine database and to submit
           your own wine recommendations for rating.
@@ -66,8 +66,16 @@ const SignUp = (props) => {
             value={newUser.password}
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          <button type="submit">
+            <h3>Submit</h3>
+          </button>
         </form>
+        <p>
+          Already have an account?&nbsp;
+          <Link to="/sign-in" className="sign-in-link">
+            Sign in
+          </Link>
+        </p>
       </section>
     </Layout>
   );

@@ -58,7 +58,10 @@ const SignIn = (props) => {
           </button>
         </form>
         <p>
-          Don't have an account? <Link to="sign-up">Sign up</Link>
+          Don't have an account?{" "}
+          <Link to="/sign-up" className="sign-up-link">
+            Sign up
+          </Link>
         </p>
       </section>
     </Layout>
