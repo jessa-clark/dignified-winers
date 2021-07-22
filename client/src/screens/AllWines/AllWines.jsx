@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import "./AllWines.css";
+import Layout from "../../components/Layout/Layout";
 
 const AllWines = () => {
   const [wines, setWines] = useState([]);
@@ -13,13 +14,15 @@ const AllWines = () => {
     getResults();
   }, []);
   return (
-    <div className="all-wines">
-      {wines.length ? (
-        wines.map((wine) => <Wine key={wine._id} wine={wine} />)
-      ) : (
-        <h2>Loading...</h2>
-      )}
-    </div>
+    <Layout>
+      <div className="all-wines">
+        {wines.length ? (
+          wines.map((wine) => <Wine key={wine._id} wine={wine} />)
+        ) : (
+          <h2>Loading...</h2>
+        )}
+      </div>
+    </Layout>
   );
 };
 
