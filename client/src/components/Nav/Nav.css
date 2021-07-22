@@ -4,7 +4,6 @@
   width: 100vw;
   justify-content: space-between;
   position: fixed;
-
   background-color: black;
 }
 
@@ -12,8 +11,7 @@
   display: flex;
   align-items: center;
   padding-left: 4rem;
-
-  color: #E5E5E5;
+  color: #e5e5e5;
   text-decoration: none;
 }
 .navbar-logo {
@@ -27,11 +25,12 @@
 .navbar-right-container {
   display: flex;
   align-items: center;
+  padding-right: 4rem;
 }
 .navbar-right-container > * {
   padding: 0.5rem;
 
-  color: #E5E5E5;
+  color: #e5e5e5;
   font-size: 1.1rem;
   text-decoration: none;
 }
