@@ -13,14 +13,13 @@ const SignUp = (props) => {
   });
 
   const handleChange = (e) => {
-    console.log(e);
     const { name, value } = e.target;
     setNewUser({ ...newUser, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const addUser = async (e) => {
+    const addUser = async () => {
       const addedUser = await signUp(newUser);
       setUser(addedUser);
       setTimeout(() => {
