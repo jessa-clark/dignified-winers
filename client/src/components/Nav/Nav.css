@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  height: 4rem;
+  height: 5rem;
   width: 100vw;
   justify-content: space-between;
   position: fixed;
@@ -11,7 +11,17 @@
 .navbar-left-container {
   display: flex;
   align-items: center;
-  color: white;
+  padding-left: 4rem;
+
+  color: #E5E5E5;
+  text-decoration: none;
+}
+.navbar-logo {
+  height: 3.95rem;
+}
+.navbar-title {
+  padding-left: 1rem;
+  font-size: 2rem;
 }
 
 .navbar-right-container {
@@ -20,5 +30,8 @@
 }
 .navbar-right-container > * {
   padding: 0.5rem;
-  color: white;
+
+  color: #E5E5E5;
+  font-size: 1.1rem;
+  text-decoration: none;
 }

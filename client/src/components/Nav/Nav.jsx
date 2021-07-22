@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+
+// images
+import logo from "../../img/DWCLogo.png"
 import "./Nav.css";
 
 const Nav = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-left-container">
-        <p>image</p>
-        <h1>Diversified Winers</h1>
+        <img className="navbar-logo" src={logo} alt="diversified winers logo"/>
+        <h1 className="navbar-title">Dignified Winers</h1>
       </Link>
       <div className="navbar-right-container">
         <Link to="/">Home</Link>
