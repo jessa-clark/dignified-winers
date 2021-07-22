@@ -9,8 +9,17 @@
   color: white;
 }
 
+.sign-up-screen-text h2 {
+  font-size: 2.5rem;
+}
+.sign-up-screen-text p {
+  font-size: 1.5rem;
+}
+
 .sign-up-screen-form {
-  background-color: rgba(255, 255, 255, 0.475);
+  width: 60%;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.256);
   background-blend-mode: lighten;
 }
 
@@ -21,11 +30,47 @@
   text-align: center;
 }
 
+.sign-up-screen-form > h3 {
+  font-size: 2rem;
+}
+
+.sign-up-screen-form label {
+  font-size: 20px;
+}
+
+.sign-up-screen-form input {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.sign-up-screen-form input:focus {
+  outline-color: #8c0d17;
+}
+
 .sign-up-screen-form button {
   background-color: #8c0d17;
+  cursor: pointer;
   width: 100%;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
   border: none;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-out;
+}
+
+.sign-up-screen-form button:hover {
+  background-color: #8c0d18a7;
+}
+.sign-in-link {
+  font-weight: bold;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.sign-in-link:hover {
+  color: rgba(255, 255, 255, 0.756);
 }
