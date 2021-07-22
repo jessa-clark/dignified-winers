@@ -3,13 +3,14 @@ import "./WineDetail.css";
 import Layout from "../../components/Layout/Layout";
 import { getOneWine, deleteWine, getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
-import { useParams, Link  } from "react-router-dom";
+import { useParams, Link, useHistory  } from "react-router-dom";
  
 const WineDetail = (props) => {
   const [wine, setWine ] = useState(null)
   const [wines, setWines ] = useState(null)
   const [isLoaded, setLoaded ] = useState(false)
-  const { id } = useParams()
+  const history = useHistory();
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchWine = async () => {
@@ -32,6 +33,16 @@ const WineDetail = (props) => {
     return <h1>Loading ...</h1>
   }
 
+  const handleSubmit = () => {
+    const deleteOneWine = async () => {
+        const deleted = await deleteWine(id)
+       setTimeout(() => {
+        history.push("/wines");
+      }, 500);
+    };
+    deleteOneWine();
+  };
+
   return (
    <Layout user={props.user}> 
         <div className='wine-detail'>
@@ -46,12 +57,12 @@ const WineDetail = (props) => {
           <div className='year'>{wine.year}</div>
           <div className='description'>{wine.description}</div>
            <div className='button-container'>
-            <Link className='edit-button' to={`/wines/${wine._id}/edit`}>
+            <Link className='edit-button' to={`/wines/edit/${id}`}>
               Edit
             </Link>
             <button
               className='delete-button'
-              onClick={() => deleteWine(wine._id)}>
+              onClick={handleSubmit}>
               Delete
             </button>
           </div>
