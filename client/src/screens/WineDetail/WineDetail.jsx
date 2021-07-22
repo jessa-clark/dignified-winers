@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./WineDetail.css";
-//import { Layout } from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { getOneWine, deleteWine, getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import { useParams, Link  } from "react-router-dom";
@@ -33,7 +33,7 @@ const WineDetail = (props) => {
   }
 
   return (
-   // <Layout user={props.user}> 
+   <Layout user={props.user}> 
         <div className='wine-detail'>
         <img
           className='wine-detail-image'
@@ -68,7 +68,7 @@ const WineDetail = (props) => {
         </div>
       </div>
 
-   // </Layout>
+   </Layout>
   )
 };
 
