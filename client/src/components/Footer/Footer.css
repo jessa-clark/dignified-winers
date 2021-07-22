@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items:center;
-  height: 6rem;
+  height: 8rem;
 }
 .dev-container {
 display: flex;
@@ -15,9 +15,10 @@ color: white;
   display: flex;
   justify-content:center;
   flex-flow: row wrap;
+  /* padding-bottom: 2rem; */
 }
 .dev-logo-container > * {
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;;
   color: white;
   text-decoration: none;
 }
