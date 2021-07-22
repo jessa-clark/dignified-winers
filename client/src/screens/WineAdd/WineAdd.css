@@ -1,0 +1,70 @@
+.add-form-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #400101;
+  color: white;
+  width: 65.60vw;
+  height: 132.31vh;
+}
+
+.add-image-container {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 30%;
+}
+
+.wine-image {
+  left: 0;
+  margin-top: 10vh;
+  width: 100%;
+}
+
+.wine-description-label {
+  margin-top: 5vh;
+}
+
+.textarea-description {
+  margin-top: 1vh;
+  width: 56.61vw;
+  height: 37.98vh;
+}
+
+.input-image-link {
+  width: 27.13vw;
+  height: 5.47vh;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10vw;
+}
+
+.input-name {
+  width: 27.13vw;
+  height: 5.47vh;
+}
+
+.input-vineyard {
+  width: 27.13vw;
+  height: 5.47vh;
+}
+
+.input-year {
+  width: 27.13vw;
+  height: 5.47vh;
+}
+
+
+
+.dropdown-type {
+  width: 27.13vw;
+  height: 5.47vh;
+}
+
+.add-button {
+  width: 27.13vw;
+  height: 5.47vh;
+}
