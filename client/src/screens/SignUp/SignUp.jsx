@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../../services/users";
+import Layout from "../../components/Layout/Layout";
 
 const SignUp = (props) => {
   const history = useHistory();
-  const { setUser, setToggleFetch } = props;
+  const { setUser } = props;
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
@@ -12,21 +13,25 @@ const SignUp = (props) => {
   });
 
   const handleChange = (e) => {
+    console.log(e);
     const { name, value } = e.target;
     setNewUser({ ...newUser, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUser(signUp(newUser));
-    setToggleFetch((curr) => !curr);
-    setTimeout(() => {
-      history.push("/");
-    }, 500);
+    const addUser = async (e) => {
+      const addedUser = await signUp(newUser);
+      setUser(addedUser);
+      setTimeout(() => {
+        history.push("/");
+      }, 500);
+    };
+    addUser();
   };
 
   return (
-    <article>
+    <Layout>
       <section>
         <h2>There’s nothing wrong with wining every now &#38; then..</h2>
         <p>
@@ -64,7 +69,7 @@ const SignUp = (props) => {
           <button type="submit">Submit</button>
         </form>
       </section>
-    </article>
+    </Layout>
   );
 };
 
