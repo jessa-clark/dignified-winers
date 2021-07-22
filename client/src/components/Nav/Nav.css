@@ -1,16 +1,27 @@
 .navbar {
   display: flex;
-  height: 4rem;
+  height: 5rem;
   width: 100vw;
   justify-content: space-between;
   position: fixed;
 
- background-color: beige;
+  background-color: black;
 }
 
 .navbar-left-container {
   display: flex;
   align-items: center;
+  padding-left: 4rem;
+
+  color: #E5E5E5;
+  text-decoration: none;
+}
+.navbar-logo {
+  height: 3.95rem;
+}
+.navbar-title {
+  padding-left: 1rem;
+  font-size: 2rem;
 }
 
 .navbar-right-container {
@@ -18,5 +29,9 @@
   align-items: center;
 }
 .navbar-right-container > * {
-padding: 0.5rem;
+  padding: 0.5rem;
+
+  color: #E5E5E5;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
