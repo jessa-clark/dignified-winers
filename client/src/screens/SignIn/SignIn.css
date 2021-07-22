@@ -1,0 +1,43 @@
+.sign-in-screen-text,
+.sign-in-screen-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.sign-in-screen-form {
+  background-color: rgba(255, 255, 255, 0.256);
+  background-blend-mode: lighten;
+}
+
+.sign-in-screen-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.sign-in-screen-form label {
+  font-size: 20px;
+}
+
+.sign-in-screen-form input {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.sign-in-screen-form button {
+  background-color: #8c0d17;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+}
