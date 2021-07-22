@@ -12,7 +12,6 @@ const SignIn = (props) => {
   });
 
   const handleChange = (e) => {
-    console.log(e);
     const { name, value } = e.target;
     setReturnUser({ ...returnUser, [name]: value });
   };

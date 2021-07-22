@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verify } from "./services/users";
 
@@ -15,7 +15,6 @@ import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState(null);
-  const [signedIn, setSignedIn] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -24,12 +23,6 @@ const App = () => {
     };
     fetchUser();
   }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSignedIn(user ? true : false);
-    }, 500);
-  }, [user]);
 
   return (
     <div className="App">
