@@ -4,11 +4,11 @@ import "./Layout.css";
 
 const Layout = (props) => {
   return (
-    <body>
+    <div>
       <Nav />
       <main className="layout-children-container">{props.children}</main>
       <Footer />
-    </body>
+    </div>
   );
 };
 
