@@ -9,7 +9,15 @@
   color: white;
 }
 
+.sign-in-screen-text h2 {
+  font-size: 2.5rem;
+}
+.sign-in-screen-text p {
+  font-size: 1.5rem;
+}
+
 .sign-in-screen-form {
+  width: 60%;
   background-color: rgba(255, 255, 255, 0.256);
   background-blend-mode: lighten;
 }
@@ -19,6 +27,10 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: center;
+}
+
+.sign-in-screen-form > h3 {
+  font-size: 2rem;
 }
 
 .sign-in-screen-form label {
@@ -33,11 +45,31 @@
   margin-bottom: 10px;
 }
 
+.sign-in-screen-form input:focus {
+  outline-color: #8c0d17;
+}
+
 .sign-in-screen-form button {
   background-color: #8c0d17;
+  cursor: pointer;
   width: 100%;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
   border: none;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-out;
+}
+.sign-in-screen-form button:hover {
+  background-color: #8c0d18a7;
+}
+
+.sign-up-link {
+  font-weight: bold;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.sign-up-link:hover {
+  color: rgba(255, 255, 255, 0.756);
 }
