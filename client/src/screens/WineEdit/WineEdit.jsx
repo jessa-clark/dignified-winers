@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./WineEdit.css";
 import { useParams, Redirect } from "react-router";
-// import { Layout } from "../../components";
+import Layout from "../../components/Layout/Layout";
 import { getOneWine, editWine } from "../../services/wines";
+
 
 const WineEdit = (props) => {
   const [wine, setWine] = useState({
@@ -16,6 +17,7 @@ const WineEdit = (props) => {
 
   const [isUpdated, setUpdated] = useState(false);
   let { id } = useParams();
+
 
   useEffect(() => {
     const fetchWine = async () => {
@@ -44,7 +46,7 @@ const WineEdit = (props) => {
   }
 
   return (
-    // <Layout user={props.user}>
+    <Layout user={props.user}>
       <div className="wine-edit">
         <div className="image-container">
           <img className="edit-wine-image" src={wine.imgURL} alt={wine.name} />

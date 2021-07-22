@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './WineAdd.css'
-// import { Layout } from '../../components'
+import Layout from "../../components/Layout/Layout";
 import { Redirect } from 'react-router-dom'
 import { addWine } from '../../services/wines'
 
@@ -35,7 +35,7 @@ const WineAdd = (props) => {
   }
 
   return (
-    // <Layout user={props.user}>
+    <Layout user={props.user}>
       <form className='create-form' onSubmit={handleSubmit}>
         <input
         className='input-name'
@@ -64,6 +64,7 @@ const WineAdd = (props) => {
         autoFocus
         onChange={handleChange}
         />
+        <img className="wine-image" src={wine.imgURL} alt={wine.name} />
         <input
         className='input-image-link'
         placeholder='Image Link'
@@ -101,7 +102,7 @@ const WineAdd = (props) => {
           Add Wine
         </button>
       </form>
-    // </Layout>
+    </Layout>
   )
 }
 
