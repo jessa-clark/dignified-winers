@@ -1,3 +1,4 @@
+/* landing */
 .landing-section {
   height: 90vh;
   position: relative;
@@ -33,21 +34,36 @@ font-size: 3rem;
    transition: 0.5s;
  }
 
+ /* who */
  .who-section {
    height: 90vh;
+   margin-top: 8rem;
  }
  .who-container {
+   display: flex;
   width: 90vw;
  }
  .who-image {
   width: 20rem;
  }
  .who-content {
-
+  color: white;
+  padding-left: 2rem;
  }
  .who-content-title {
-
+font-size: 2rem;
  }
  .who-content-text {
+  font-size: 1.3rem;
+ }
+
+ /* winner */
+ .winner-wines-container {
+color: white;
+ } 
+.winner-wines-title {
+
+ }
+ .winner-wines-text {
 
  }

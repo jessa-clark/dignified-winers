@@ -34,6 +34,12 @@ const Home = () => {
             </p>
           </div>
         </div>
+        <div className="winner-wines-container">
+          <h2 className="winner-wines-title">Winner Wines</h2>
+          <p className="winner-wines-text">From the taste to the group, only wines worth your time end up on our Featured Wines</p>
+          <h2>I'm a carousel</h2>
+          <button onClick={takeToWines} className="landing-button">See All Wines</button>
+        </div>
       </section>
     </Layout>
   );
