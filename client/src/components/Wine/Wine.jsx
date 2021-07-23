@@ -8,10 +8,14 @@ const Wine = (props) => {
       <article>
         <div className="wine-header">
           <h3>{name}</h3>
-          <p>{vineyard}</p>
         </div>
-        <img src={imgURL} alt={name} />
-        <h5>{year}</h5>
+        <div className="wine-body-image">
+          <img src={imgURL} alt={name} />
+        </div>
+        <div className="wine-footer">
+          <p>{vineyard}</p>
+          <h5>{year}</h5>
+        </div>
       </article>
     </Link>
   );

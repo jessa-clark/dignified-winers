@@ -1,5 +1,6 @@
 .all-wines {
   display: flex;
+  width: 80%;
   flex-flow: row wrap;
   justify-content: center;
 }
