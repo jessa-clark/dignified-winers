@@ -20,8 +20,7 @@
 
 .wine-detail-image {
   width: 40%;
-  margin: 20px auto;
-}
+ }
 
 .wine-detail-image img {
   width: 100%;
@@ -76,7 +75,6 @@
   color: white;
   text-decoration: none;
   justify-content: space-between;
-  height: 3rem;
 }
 
 .wine-detail-delete-button {
@@ -86,7 +84,6 @@
   font-size: 1.3em;
   border: none;
   color: white;
-  height: 2.7rem;
 }
 
 .related {
