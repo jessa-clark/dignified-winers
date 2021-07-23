@@ -4,6 +4,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer-container">
+      <h3 className="footer-title">Thanks for Wining! </h3>
+      <p className="footer-title-text">Below credits the 4 talented developers who made this site possible! If you'd like to see the repository for this website in particular, you can click <a href="https://github.com/jessa-clark/dignified-winers" target="_blank" rel="noreferrer" alt="dignified winers repository link">here!</a></p>
+      <div className="footer-dev-container">
       <div className="dev-container">
         <p className="dev-name">Rahul Joshi</p>
         <div className="dev-logo-container">
@@ -40,13 +43,14 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Jessa Clark</p>
         <div className="dev-logo-container">
-          <a href="www.linkedin.com/in/jessa-clark" target="_blank" rel="noreferrer" className="linkedin-logo">
+          <a href="https://www.linkedin.com/in/jessa-clark" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
           </a>
           <a href="https://github.com/jessa-clark" target="_blank" rel="noreferrer" className="github-logo">
           <VscGithub size={45}/>
           </a>
         </div>
+      </div>
       </div>
     </footer>
   );
