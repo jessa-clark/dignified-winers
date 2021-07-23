@@ -1,0 +1,10 @@
+.sort-dropdown select {
+  background-color: #8c0d17;
+  color: white;
+  font-size: 25px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  align-self: flex-end;
+}

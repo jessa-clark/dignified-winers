@@ -28,9 +28,11 @@ const Nav = () => {
       <div className="navbar-right-container">
         <Link to="/">Home</Link>
         <Link to="/wines">Browse Wines</Link>
-        <Link to="/add-wine">Add Wine</Link>
         {userExists ? (
-          <Link to="/sign-out">Sign Out</Link>
+          <>
+            <Link to="/add-wine">Add Wine</Link>
+            <Link to="/sign-out">Sign Out</Link>
+          </>
         ) : (
           <Link to="/sign-up">Log In/Register</Link>
         )}
