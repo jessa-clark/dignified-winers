@@ -56,9 +56,7 @@
   width: 56.61vw;
   height: 400px;
   margin-bottom: 3vh;
-  text-overflow: inherit;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap:break-word;
   resize: none;
   padding: 10px;
   font-size: 1.25rem;
@@ -66,12 +64,16 @@
 
 .add-button {
   width: 11.35vw;
-  height: 6.81vh;
+  height: 2.5rem;
+  border: none;
+  padding-top: .3rem;
+  align-content: center;
   border-radius: 0.52vw;
   background-color: #8C0D17;
   color: white;
   text-align: center;
   align-self: center;
+  justify-content: center;
 }
 
 .add-form {
@@ -136,8 +138,3 @@ font-size: 1.25rem;
   width: 26.5vw;
   height: 5.47vh;
 }
-
-
-
-
-

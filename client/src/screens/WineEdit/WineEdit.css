@@ -38,6 +38,7 @@
   grid-area: C;
   margin-bottom: 10vh;
   font-family: inherit;
+  overflow-wrap:break-word;
 }
 
 .edit-form {
