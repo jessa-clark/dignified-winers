@@ -1,49 +1,58 @@
-/* body {
+body {
     background-color: #400101;;
-} */
+}
 
 /* convert pxs to vh and vw */
 
+.detail {
+display: flex;
+}
+
 .wine-detail-image {
-position: absolute;
-width: 471px;
-height: 436px;
-left: 158px;
-top: 230px;
+position: relative;
+justify-content: left;
+align-items: flex-start;
+width: 35vw;
+height: 35vh;
+left: 10em;
+top: 8em;
 
 }
 
 .wine-detail-name {
-    position: absolute;
-width: 534px;
-height: 116px;
-left: 698px;
-top: 177px;
+position: relative;
+width: 55vw;
+height: 20vh;
+left: 20em;
+top: -9em;
 
 font-family: Lustria;
 font-style: normal;
 font-weight: normal;
-font-size: 50px;
-line-height: 64px;
+font-size: 5em;
+line-height: 2em;
+flex-wrap: nowrap;
 
-color: #FFFFFF;
+color: white;
 
 }
 
 .wine-detail-vineyard {
 
-position: absolute;
-width: 465px;
-height: 31px;
-left: 698px;
-top: 262px;
-
-font-family: Lustria;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 31px;
-/* identical to box height */
+    position: relative;
+    width: 55vw;
+    height: 20vh;
+    left: -1.8em;
+    top: -9em;
+    
+    font-family: Lustria;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 2em;
+    flex-wrap: nowrap;
+    
+    color: white;
 
 
 color: #FFFFFF;
@@ -52,7 +61,7 @@ color: #FFFFFF;
 
 .wine-detail-year {
 
-position: absolute;
+position: relative;
 width: 51px;
 height: 31px;
 left: 698px;
@@ -70,7 +79,7 @@ color: #FFFFFF;
 }
 
 .wine-detail-description {
-    position: absolute;
+    position: relative;
 width: 530px;
 height: 258px;
 left: 698px;
@@ -87,7 +96,7 @@ color: #FFFFFF;
 }
 
 .wine-detail-edit-button {
-position: absolute;
+position: relative;
 width: 165px;
 height: 65px;
 left: 698px;
@@ -99,7 +108,7 @@ border-radius: 10px;
 
 .wine-detail-delete-button {
 
-position: absolute;
+position: relative;
 width: 165px;
 height: 65px;
 left: 890px;
@@ -111,7 +120,7 @@ border-radius: 10px;
 
 .all-wines-detail {
 
-position: absolute;
+position: relative;
 width: 279px;
 height: 431px;
 left: 105px;
