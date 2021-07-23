@@ -48,11 +48,14 @@ const WineAdd = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
+      <div className="heading-wine-add"><h3>Add a submission of your own wine or a personal favorite</h3><h3>tested and ranked by our team of experts</h3></div>
       <div className="add-form-container">
         <div className="add-image-container">
           <img className="wine-image" src={wine.imgURL} alt={wine.name} />
+        </div>
+        <div className="wine-description-container">
           <label className="wine-description-label">About the Wine</label>
-          <input
+          <textarea
             className="textarea-description"
             value={wine.description}
             name="description"
@@ -60,6 +63,9 @@ const WineAdd = (props) => {
             autoFocus
             onChange={handleChange}
           />
+          <button type="submit" className="add-button">
+            <h3>Submit</h3>
+          </button>
         </div>
         <form className="add-form" onSubmit={handleSubmit}>
           <label className="wine-name-label">Wine Name</label>
@@ -98,6 +104,7 @@ const WineAdd = (props) => {
             autoFocus
             onChange={handleChange}
           />
+          <label className="dropdown-type-label">Type</label>
           <select
             className="dropdown-type"
             value={wine.type}
@@ -111,9 +118,6 @@ const WineAdd = (props) => {
             <option value="white">white</option>
             <option value="specialty">specialty</option>
           </select>
-          <button type="submit" className="add-button">
-            Add Wine
-          </button>
         </form>
       </div>
     </Layout>

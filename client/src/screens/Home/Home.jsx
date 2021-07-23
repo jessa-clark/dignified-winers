@@ -21,7 +21,7 @@ const Home = () => {
       </section>
       <section className="who-section">
         <div className="who-container">
-          <img className="who-image" src="/img/TheWiners.jpeg"/>
+          <img className="who-image" src="/img/TheWiners.jpeg" alt="4 wine glasses cheering"/>
           <div className="who-content">
             <h2 className="who-content-title">Who are the Winers?</h2>
             <p className="who-content-text">

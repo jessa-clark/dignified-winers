@@ -1,131 +1,140 @@
-body {
-    background-color: #400101;;
+
+
+.wine-detail {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid white;
+    flex-flow: row wrap;
+     align-items: center;
+     background-color: #400101;
 }
 
-/* convert pxs to vh and vw */
-
 .detail {
-display: flex;
+  display: flex;
+  flex-direction: column;
+  border-width: 0.1em;
+  padding-bottom: 1em;
+  margin-bottom: 5em;
+  width: 40%;
+
 }
 
 .wine-detail-image {
-position: relative;
-justify-content: left;
-align-items: flex-start;
-width: 35vw;
-height: 35vh;
-left: 10em;
-top: 8em;
+  width: 40%;
+  
+}
 
+.wine-detail-image img {
+    width: 100%;
 }
 
 .wine-detail-name {
-position: relative;
-width: 55vw;
-height: 20vh;
-left: 20em;
-top: -9em;
-
-font-family: Lustria;
-font-style: normal;
-font-weight: normal;
-font-size: 5em;
-line-height: 2em;
-flex-wrap: nowrap;
-
-color: white;
-
+    
+  font-family: Lustria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1em;
+  color: white;
+  margin: 10px 0;
 }
 
 .wine-detail-vineyard {
 
-    position: relative;
-    width: 55vw;
-    height: 20vh;
-    left: -1.8em;
-    top: -9em;
-    
-    font-family: Lustria;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3em;
-    line-height: 2em;
-    flex-wrap: nowrap;
-    
-    color: white;
-
-
-color: #FFFFFF;
-
+  
+  font-family: Lustria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: white;
+  margin: 5px 0;
 }
 
 .wine-detail-year {
-
-position: relative;
-width: 51px;
-height: 31px;
-left: 698px;
-top: 316px;
-
-font-family: Lustria;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 31px;
-/* identical to box height */
-
-
-color: #FFFFFF;
+ 
+ 
+  font-family: Lustria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3em;
+  flex-wrap: nowrap;
+  color: white;
+   
 }
 
 .wine-detail-description {
-    position: relative;
-width: 530px;
-height: 258px;
-left: 698px;
-top: 358px;
-
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 29px;
-
-color: #FFFFFF;
-
+ 
+ 
+  font-family: Lustria;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.2em;
+  flex-wrap: nowrap;
+  color: white;
+  margin: 10px 0 20px;
 }
 
 .wine-detail-edit-button {
-position: relative;
-width: 165px;
-height: 65px;
-left: 698px;
-top: 668px;
+ 
+ 
+  background-color: #8c0d17;
+  border-radius: .3em;
+  padding: .3em 1.5em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  margin-right: 10px;
 
-background: #8C0D17;
-border-radius: 10px;
 }
 
 .wine-detail-delete-button {
+ 
+ 
+  background-color: #8c0d17;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 1.3em;
+  padding: .3em 1.5em;
+  border: none;
 
-position: relative;
-width: 165px;
-height: 65px;
-left: 890px;
-top: 666px;
+}
 
-background: #8C0D17;
-border-radius: 10px;
+.related {
+ 
+ 
+  color: white;
+  font-family: Lustria;
+  line-height: 2em;
 }
 
 .all-wines-detail {
 
-position: relative;
-width: 279px;
-height: 431px;
-left: 105px;
-top: 942px;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color:  #0D0D0D;
+}
+
+.below-line {
+    background-color: #400101;
+    width: 100%;
+    padding: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .wine-detail-image {
+        width: 80%;
+    }
+
+    .detail {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    
+
 
 }
