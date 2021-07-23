@@ -48,14 +48,17 @@ const WineAdd = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
-      <div className="heading-wine-add"><h3>Add a submission of your own wine or a personal favorite</h3><h3>tested and ranked by our team of experts</h3></div>
+      <div className="heading-wine-add">
+        <h3>Add a submission of your own wine or a personal favorite</h3>
+        <h3>tested and ranked by our team of experts</h3>
+      </div>
       <div className="add-form-container">
         <div className="add-image-container">
           <img className="wine-image" src={wine.imgURL} alt={wine.name} />
         </div>
-        <div className="wine-description-container">
+        <form className="wine-description-container" onSubmit={handleSubmit}>
           <label className="wine-description-label">About the Wine</label>
-          <input
+          <textarea
             className="textarea-description"
             value={wine.description}
             name="description"
@@ -66,7 +69,7 @@ const WineAdd = (props) => {
           <button type="submit" className="add-button">
             <h3>Submit</h3>
           </button>
-        </div>
+        </form>
         <form className="add-form" onSubmit={handleSubmit}>
           <label className="wine-name-label">Wine Name</label>
           <input
