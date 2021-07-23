@@ -4,6 +4,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer-container">
+      <h3 className="footer-title">Thanks for Wining! </h3>
+      <p className="footer-title-text">Below credits the 4 talented developers who made this site possible! If you'd like to see the repository for this website in particular, you can click <a href="https://github.com/jessa-clark/dignified-winers" target="_blank" rel="noreferrer" alt="dignified winers repository link">here!</a></p>
+      <div className="footer-dev-container">
       <div className="dev-container">
         <p className="dev-name">Rahul Joshi</p>
         <div className="dev-logo-container">
@@ -47,6 +50,7 @@ const Footer = () => {
           <VscGithub size={45}/>
           </a>
         </div>
+      </div>
       </div>
     </footer>
   );

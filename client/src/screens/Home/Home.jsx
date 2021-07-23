@@ -17,12 +17,9 @@ const Home = () => {
   return (
     <Layout>
       <section className="landing-section">
-        <div className="landing-greeting">
-          {/* <h2 className="landing-text">Welcome to the World of Wine</h2> */}
-          <button onClick={takeToWines} className="landing-button">
-            Browse our Wines
-          </button>
-        </div>
+        <button onClick={takeToWines} className="landing-button">
+          Browse our Wines
+        </button>
       </section>
       <section className="who-section">
         <div className="who-container">
@@ -62,6 +59,7 @@ const Home = () => {
             Wine is its most beautiful, when its shared among friends. Whether
             there’s a new vineyard that needs to be heard, or a terrible taste
             you need to get off your chest... <br />
+            <br />
             We’ll Wine With You.
           </p>
           <button onClick={takeToSignUp} className="community-button">
