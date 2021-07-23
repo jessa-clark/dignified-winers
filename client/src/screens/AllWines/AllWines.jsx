@@ -20,7 +20,7 @@ const AllWines = () => {
   return (
     <Layout>
       <Search wines={wines} setWineList={setWineList} />
-      <Sort wines={wines} setWineList={setWineList} />
+      <Sort wineList={wineList} setWineList={setWineList} />
       <div className="all-wines">
         {wineList.length ? (
           wineList.map((wine) => <Wine key={wine._id} wine={wine} />)

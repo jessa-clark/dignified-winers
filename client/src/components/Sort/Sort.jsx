@@ -2,9 +2,9 @@ import { sort } from "../../utils/sort";
 import "./Sort.css";
 
 const Sort = (props) => {
-  const { wines, setWineList } = props;
+  const { wineList, setWineList } = props;
   const handleChange = (e) => {
-    setWineList(sort(wines, e.target.value));
+    setWineList(sort(wineList, e.target.value));
   };
 
   return (
