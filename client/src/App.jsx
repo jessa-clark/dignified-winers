@@ -47,7 +47,7 @@ const App = () => {
           <AllWines user={user} />
         </Route>
 
-        <Route exact path="/edit/:id">
+        <Route exact path="/wines/edit/:id">
           <WineEdit user={user} />
         </Route>
 

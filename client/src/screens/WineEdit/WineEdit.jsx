@@ -54,21 +54,33 @@ const WineEdit = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
-      <div className="wine-edit">
-        <div className="image-container">
+      <div className="heading-wine-add">
+        <h3>Edit your wine submission!</h3>
+        <h3>(We won't tell the others)</h3>
+      </div>
+      <div className="edit-form-container">
+        <div className="edit-image-container">
           <img className="edit-wine-image" src={wine.imgURL} alt={wine.name} />
-          <form onSubmit={handleSubmit}>
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={wine.imgURL}
-              name="imgURL"
-              required
-              onChange={handleChange}
-            />
-          </form>
         </div>
+        <form
+          className="edit-wine-description-container"
+          onSubmit={handleSubmit}
+        >
+          <label className="wine-description-label">About the Wine</label>
+          <textarea
+            className="textarea-description"
+            value={wine.description}
+            name="description"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          <button type="submit" className="add-button">
+            <h3>Update</h3>
+          </button>
+        </form>
         <form className="edit-form" onSubmit={handleSubmit}>
+          <label className="wine-name-label">Wine Name</label>
           <input
             className="edit-input-name"
             placeholder="Wine Name"
@@ -78,6 +90,7 @@ const WineEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
+          <label className="vineyard-name-label">Vineyard</label>
           <input
             className="edit-input-vineyard"
             placeholder="Vineyard Name"
@@ -87,6 +100,7 @@ const WineEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
+          <label className="year-label">Year</label>
           <input
             className="edit-input-year"
             placeholder="Year"
@@ -96,16 +110,16 @@ const WineEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
+          <label className="image-link-label">Image Link</label>
           <input
-            className="edit-textarea-description"
-            rows={10}
-            placeholder="Description"
-            value={wine.description}
-            name="description"
+            className="edit-input-image-link"
+            value={wine.imgURL}
+            name="imgURL"
             required
             autoFocus
             onChange={handleChange}
           />
+          <label className="dropdown-type-label">Type</label>
           <select
             className="edit-dropdown-type"
             placeholder="Type"
@@ -120,9 +134,6 @@ const WineEdit = (props) => {
             <option value="white">white</option>
             <option value="specialty">specialty</option>
           </select>
-          <button type="submit" className="add-button">
-            Update
-          </button>
         </form>
       </div>
     </Layout>
