@@ -66,8 +66,9 @@
 
 }
 
-.wine-detail-edit-button {
+.wine-detail-edit-button, .wine-detail-delete-button {
   background-color: #8c0d17;
+  border: none;
   border-radius: 0.3em;
   padding: 0.4em 1.5em;
   font-size: 1.3em;
@@ -77,14 +78,14 @@
   justify-content: space-between;
 }
 
-.wine-detail-delete-button {
-  background-color: #8c0d17;
+
+  /* background-color: #8c0d17;
   border-radius: 0.3em;
   padding: 0.1em 1em .1em;
   font-size: 1.3em;
   border: none;
-  color: white;
-}
+  color: white; */
+
 
 .related {
   color: white;
