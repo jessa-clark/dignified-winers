@@ -97,20 +97,7 @@ const Home = () => {
                 </Row>
               </Carousel.Item>
             ))}
-
-            {/* <Carousel.Item>
-              {brokenWineList[1].map((wine) => {
-                <Wine key={wine._id} wine={wine}/>
-              })}
-            </Carousel.Item>
-            <Carousel.Item>
-              {brokenWineList[2].map((wine) => {
-                <Wine key={wine._id} wine={wine}/>
-              })}
-            </Carousel.Item> */}
           </Carousel>
-
-          <h2>I'm a carousel</h2>
           <button onClick={takeToWines} className="who-button">
             See All Wines
           </button>
