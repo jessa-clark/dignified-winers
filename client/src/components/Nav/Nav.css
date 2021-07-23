@@ -21,6 +21,11 @@
 .navbar-title {
   padding-left: 1rem;
   font-size: 2rem;
+  transition: color 0.5 ease-out;
+}
+
+.navbar-left-container:hover {
+  color: white;
 }
 
 .navbar-right-container {
