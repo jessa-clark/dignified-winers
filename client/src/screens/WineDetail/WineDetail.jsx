@@ -66,8 +66,7 @@ const WineDetail = (props) => {
 
         </div>
       </div>
-        <hr />
-          <div className="below-line">
+           <div className="below-line">
             <h1 className="related">Related Wines</h1>
             <div className="all-wines-detail">
               {wines?.length ? (

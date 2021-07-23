@@ -1,12 +1,10 @@
-
-
 .wine-detail {
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 1px solid white;
-    flex-flow: row wrap;
-     align-items: center;
-     background-color: #400101;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid white;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: #400101;
 }
 
 .detail {
@@ -16,20 +14,17 @@
   padding-bottom: 1em;
   margin-bottom: 5em;
   width: 40%;
-
 }
 
 .wine-detail-image {
   width: 40%;
-  
 }
 
 .wine-detail-image img {
-    width: 100%;
+  width: 100%;
 }
 
 .wine-detail-name {
-    
   font-family: Lustria;
   font-style: normal;
   font-weight: normal;
@@ -40,8 +35,6 @@
 }
 
 .wine-detail-vineyard {
-
-  
   font-family: Lustria;
   font-style: normal;
   font-weight: normal;
@@ -51,20 +44,15 @@
 }
 
 .wine-detail-year {
- 
- 
   font-family: Lustria;
   font-style: normal;
   font-weight: normal;
   font-size: 1.3em;
   flex-wrap: nowrap;
   color: white;
-   
 }
 
 .wine-detail-description {
- 
- 
   font-family: Lustria;
   font-style: normal;
   font-weight: normal;
@@ -76,65 +64,108 @@
 }
 
 .wine-detail-edit-button {
- 
- 
   background-color: #8c0d17;
-  border-radius: .3em;
-  padding: .3em 1.5em;
+  border-radius: 0.3em;
+  padding: 0.3em 1.5em;
   text-decoration: none;
   color: white;
   font-size: 1.3em;
   margin-right: 10px;
-
 }
 
 .wine-detail-delete-button {
- 
- 
   background-color: #8c0d17;
   border-radius: 0.3em;
   color: white;
   font-size: 1.3em;
-  padding: .3em 1.5em;
+  padding: 0.3em 1.5em;
   border: none;
-
 }
 
 .related {
- 
- 
   color: white;
   font-family: Lustria;
-  line-height: 2em;
+  margin-bottom: 10px;
 }
 
 .all-wines-detail {
-
- 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color:  #0D0D0D;
+  display: flex;
+  background-color: #0d0d0d;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
 }
 
 .below-line {
-    background-color: #400101;
-    width: 100%;
-    padding: 50px;
+  background-color: #400101;
+  width: 100%;
+  padding: 50px;
 }
 
-@media screen and (max-width: 1000px) {
-    .wine-detail-image {
-        width: 80%;
-    }
+@media screen and (max-width: 1024px) {
+  .wine-detail-image {
+    width: 80%;
+  }
 
-    .detail {
-        width: 80%;
-        align-items: center;
-        text-align: center;
+  .detail {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
 
-    }
+  .below-line {
+    background-color: #400101;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 
-    
+  .all-wines-detail {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 
+  .wine {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
+@media screen and (max-width: 770px) {
+  .wine-detail-image {
+    width: 80%;
+  }
+
+  .detail {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  }
+
+  .below-line {
+    background-color: #400101;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  }
+
+  .all-wines-detail {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 10px auto;
+
+  }
+
+  .wine {
+    width: 87%;
+    justify-content: center;
+    align-items: center;
+  }
 }
