@@ -12,16 +12,7 @@ import "./Home.css";
 const Home = () => {
   const history = useHistory();
   const [wineList, setWineList] = useState([]);
-  const [brokenWineList, setBrokenWineList] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchWines =  async () => {
-  //     const allWines = await getWines();
-  //     setWineList(allWines)
-  //   }
-  //   fetchWines();
-
-  // },[])
+  
   useEffect(() => {
     const settingBrokenList = (arr, size) => {
       let dividedWineList = [];
@@ -36,11 +27,8 @@ const Home = () => {
       setWineList(settingBrokenList([...allWines], 3));
     };
     fetchWines();
-    // const splitList = splitWineList(wineList, 3);
   }, []);
 
-  console.log("broken:", brokenWineList);
-  console.log(wineList);
   const takeToWines = () => {
     setTimeout(() => {
       history.push("/wines");
@@ -52,7 +40,6 @@ const Home = () => {
     }, 1000);
   };
 
-  console.log(wineList);
   return (
     <Layout>
       <section className="landing-section">
@@ -88,12 +75,12 @@ const Home = () => {
           <Carousel>
             {wineList.map((list, index) => (
               <Carousel.Item key={index}>
-                    <Row>
+                    <Row key={index+100}>
                   {/* <Container> */}
 
 
                   {list.map((wine,index) => (
-                <Col>
+                <Col key={index-1000}>
                     <Wine key={wine._id} wine={wine} />
                 </Col>
                     
