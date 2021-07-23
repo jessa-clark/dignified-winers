@@ -1,3 +1,11 @@
+.heading-wine-add {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  line-height: 6vh;
+}
 .add-form-container {
   padding: 0;
   margin-bottom: 5vh;
@@ -37,30 +45,11 @@
   flex-direction: column;
   grid-area: C;
   margin-bottom: 10vh;
+  font-family: inherit;
 }
 .wine-description-label {
-font-size: 1.25rem;
-margin-bottom: 1vh;
-}
-
-.wine-name-label {
-font-size: 1.25rem;
-}
-
-.vineyard-name-label {
   font-size: 1.25rem;
-}
-
-.year-label {
-  font-size: 1.25rem;
-}
-
-.image-link-label {
-  font-size: 1.25rem;
-}
-
-.dropdown-type-label {
-  font-size: 1.25rem;
+  margin-bottom: 1vh;
 }
 
 .textarea-description {
@@ -70,43 +59,9 @@ font-size: 1.25rem;
   text-overflow: inherit;
   word-wrap: break-word;
   word-break: break-all;
-}
-
-.input-image-link {
-  width: 26.5vw;
-  height: 5.47vh;
-}
-
-.add-form {
-  grid-area: B;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1vh;
-  margin-top: 10.8vh;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.input-name {
-  width: 26.5vw;
-  height: 5.47vh;
-}
-
-.input-vineyard {
-  width: 26.5vw;
-  height: 5.47vh;
-}
-
-.input-year {
-  width: 26.5vw;
-  height: 5.47vh;
-}
-
-
-
-.dropdown-type {
-  width: 26.5vw;
-  height: 5.47vh;
+  resize: none;
+  padding: 10px;
+  font-size: 1.25rem;
 }
 
 .add-button {
@@ -119,13 +74,70 @@ font-size: 1.25rem;
   align-self: center;
 }
 
-.heading-wine-add {
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  line-height: 6vh;
+.add-form {
+  grid-area: B;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  margin-top: 10.8vh;
+  margin-bottom: 0;
+  padding: 0;
 }
+
+.wine-name-label {
+font-size: 1.25rem;
+}
+
+.input-name {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.vineyard-name-label {
+  font-size: 1.25rem;
+}
+
+.input-vineyard {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.year-label {
+  font-size: 1.25rem;
+}
+
+.input-year {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.image-link-label {
+  font-size: 1.25rem;
+}
+
+.input-image-link {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.dropdown-type-label {
+  font-size: 1.25rem;
+}
+
+.dropdown-type {
+  width: 26.5vw;
+  height: 5.47vh;
+}
+
+
+
 
 
