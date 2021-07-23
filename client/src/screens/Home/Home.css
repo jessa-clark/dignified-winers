@@ -118,6 +118,6 @@ margin-top: 4rem;
   font-size: 1.3rem;
  }
 
- .flex-div {
+ .carousel-item{
    display: flex;
  }
