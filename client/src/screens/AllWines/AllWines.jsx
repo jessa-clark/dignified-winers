@@ -15,6 +15,9 @@ const AllWines = () => {
   }, []);
   return (
     <Layout>
+      <div className="search-area">
+        <input type="text" />
+      </div>
       <div className="all-wines">
         {wines.length ? (
           wines.map((wine) => <Wine key={wine._id} wine={wine} />)
