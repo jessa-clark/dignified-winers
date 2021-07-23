@@ -55,7 +55,7 @@ const WineAdd = (props) => {
         </div>
         <div className="wine-description-container">
           <label className="wine-description-label">About the Wine</label>
-          <input
+          <textarea
             className="textarea-description"
             value={wine.description}
             name="description"
