@@ -1,0 +1,85 @@
+.edit-form-container {
+  padding: 0;
+  margin-bottom: 5vh;
+  display: grid;
+  background-color: #400101;
+  color: white;
+  width: 65.60vw;
+  height: 132.31vh;
+  justify-content: center;
+  column-gap: 30vw;
+  grid-template-areas: 
+  "A B"
+  "A B"
+  "C C"
+  ;
+}
+
+.edit-image-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.edit-wine-image {
+  grid-area: A;
+  position: absolute;
+  width: auto;
+  max-width: 26.042vw;
+  height: auto;
+  max-height: 73.52941176470588vh;
+  margin-top: 11.68vh;
+  overflow: hidden;
+}
+
+.edit-wine-description-container {
+  display: flex;
+  flex-direction: column;
+  grid-area: C;
+  margin-bottom: 10vh;
+  font-family: inherit;
+  overflow-wrap:break-word;
+}
+
+.edit-form {
+  grid-area: B;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  margin-top: 10.8vh;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.edit-input-name {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.edit-input-vineyard {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.edit-input-year {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.edit-input-image-link {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.edit-dropdown-type {
+  width: 26.5vw;
+  height: 5.47vh;
+}

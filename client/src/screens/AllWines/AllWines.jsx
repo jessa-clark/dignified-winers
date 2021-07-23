@@ -3,9 +3,12 @@ import { getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import "./AllWines.css";
 import Layout from "../../components/Layout/Layout";
+import Search from "../../components/Search/Search";
+import Sort from "../../components/Sort/Sort";
 
 const AllWines = () => {
   const [wines, setWines] = useState([]);
+  const [wineList, setWineList] = useState([]);
   useEffect(() => {
     const getResults = async () => {
       const results = await getWines();
@@ -15,12 +18,11 @@ const AllWines = () => {
   }, []);
   return (
     <Layout>
-      <div className="search-area">
-        <input type="text" />
-      </div>
+      <Search wines={wines} setWineList={setWineList} />
+      <Sort wineList={wineList} setWineList={setWineList} />
       <div className="all-wines">
-        {wines.length ? (
-          wines.map((wine) => <Wine key={wine._id} wine={wine} />)
+        {wineList.length ? (
+          wineList.map((wine) => <Wine key={wine._id} wine={wine} />)
         ) : (
           <h2>Loading...</h2>
         )}

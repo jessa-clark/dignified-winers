@@ -48,7 +48,10 @@ const WineAdd = (props) => {
     <Redirect to="/sign-up" />
   ) : (
     <Layout user={props.user}>
-      <div className="heading-wine-add"><h3>Add a submission of your own wine or a personal favorite</h3><h3>tested and ranked by our team of experts</h3></div>
+      <div className="heading-wine-add">
+        <h3>Add a submission of your own wine or a personal favorite</h3>
+        <h3>tested and ranked by our team of experts</h3>
+      </div>
       <div className="add-form-container">
         <div className="add-image-container">
           <img className="wine-image" src={wine.imgURL} alt={wine.name} />

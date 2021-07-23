@@ -3,7 +3,7 @@
   height: 5rem;
   width: 100vw;
   justify-content: space-between;
-  position: fixed;
+  position: fixed !important;
   z-index: 1;
   background-color: black;
 }
@@ -21,6 +21,11 @@
 .navbar-title {
   padding-left: 1rem;
   font-size: 2rem;
+  transition: color 0.5 ease-out;
+}
+
+.navbar-left-container:hover {
+  color: white;
 }
 
 .navbar-right-container {
@@ -30,8 +35,12 @@
 }
 .navbar-right-container > * {
   padding: 0.5rem;
-
   color: #e5e5e5;
   font-size: 1.1rem;
   text-decoration: none;
+  transition: color 0.5 ease-out;
+}
+
+.navbar-right-container > *:hover {
+  color: #ab8f7f;
 }

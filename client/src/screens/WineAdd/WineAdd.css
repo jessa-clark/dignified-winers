@@ -1,3 +1,11 @@
+.heading-wine-add {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  line-height: 6vh;
+}
 .add-form-container {
   padding: 0;
   margin-bottom: 5vh;
@@ -37,44 +45,35 @@
   flex-direction: column;
   grid-area: C;
   margin-bottom: 10vh;
+  font-family: inherit;
 }
 .wine-description-label {
-font-size: 1.25rem;
-margin-bottom: 1vh;
-}
-
-.wine-name-label {
-font-size: 1.25rem;
-}
-
-.vineyard-name-label {
   font-size: 1.25rem;
-}
-
-.year-label {
-  font-size: 1.25rem;
-}
-
-.image-link-label {
-  font-size: 1.25rem;
-}
-
-.dropdown-type-label {
-  font-size: 1.25rem;
+  margin-bottom: 1vh;
 }
 
 .textarea-description {
   width: 56.61vw;
   height: 400px;
   margin-bottom: 3vh;
-  text-overflow: inherit;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap:break-word;
+  resize: none;
+  padding: 10px;
+  font-size: 1.25rem;
 }
 
-.input-image-link {
-  width: 26.5vw;
-  height: 5.47vh;
+.add-button {
+  width: 11.35vw;
+  height: 2.5rem;
+  border: none;
+  padding-top: .3rem;
+  align-content: center;
+  border-radius: 0.52vw;
+  background-color: #8C0D17;
+  color: white;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
 }
 
 .add-form {
@@ -87,45 +86,55 @@ font-size: 1.25rem;
   padding: 0;
 }
 
+.wine-name-label {
+font-size: 1.25rem;
+}
+
 .input-name {
   width: 26.5vw;
   height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.vineyard-name-label {
+  font-size: 1.25rem;
 }
 
 .input-vineyard {
   width: 26.5vw;
   height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.year-label {
+  font-size: 1.25rem;
 }
 
 .input-year {
   width: 26.5vw;
   height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
 }
 
+.image-link-label {
+  font-size: 1.25rem;
+}
 
+.input-image-link {
+  width: 26.5vw;
+  height: 5.47vh;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+.dropdown-type-label {
+  font-size: 1.25rem;
+}
 
 .dropdown-type {
   width: 26.5vw;
   height: 5.47vh;
 }
-
-.add-button {
-  width: 11.35vw;
-  height: 6.81vh;
-  border-radius: 0.52vw;
-  background-color: #8C0D17;
-  color: white;
-  text-align: center;
-  align-self: center;
-}
-
-.heading-wine-add {
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  line-height: 6vh;
-}
-
-
