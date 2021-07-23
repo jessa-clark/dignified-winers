@@ -1,3 +1,7 @@
+.search-area {
+  background-image: url("./WineRow.jpeg");
+}
+
 .all-wines {
   display: flex;
   flex-flow: row wrap;
