@@ -19,7 +19,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .wine-image {
@@ -30,6 +29,7 @@
   height: auto;
   max-height: 73.52941176470588vh;
   margin-top: 11.68vh;
+  overflow: hidden;
 }
 
 .wine-description-container {
@@ -70,7 +70,6 @@ font-size: 1.25rem;
   text-overflow: inherit;
   word-wrap: break-word;
   word-break: break-all;
-  re-size: none;
 }
 
 .input-image-link {
