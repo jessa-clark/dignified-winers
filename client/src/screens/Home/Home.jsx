@@ -1,9 +1,46 @@
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+
+import { getWines } from "../../services/wines";
+
+import Wine from "../../components/Wine/Wine";
 import Layout from "../../components/Layout/Layout";
+import { Carousel, Row, Col } from "react-bootstrap";
+
 import "./Home.css";
 
 const Home = () => {
   const history = useHistory();
+  const [wineList, setWineList] = useState([]);
+  const [brokenWineList, setBrokenWineList] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchWines =  async () => {
+  //     const allWines = await getWines();
+  //     setWineList(allWines)
+  //   }
+  //   fetchWines();
+
+  // },[])
+  useEffect(() => {
+    const settingBrokenList = (arr, size) => {
+      let dividedWineList = [];
+      while (arr.length > size) {
+        dividedWineList.push(arr.splice(0, size));
+      }
+      return dividedWineList;
+    };
+
+    const fetchWines = async () => {
+      const allWines = await getWines();
+      setWineList(settingBrokenList([...allWines], 3));
+    };
+    fetchWines();
+    // const splitList = splitWineList(wineList, 3);
+  }, []);
+
+  console.log("broken:", brokenWineList);
+  console.log(wineList);
   const takeToWines = () => {
     setTimeout(() => {
       history.push("/wines");
@@ -14,6 +51,8 @@ const Home = () => {
       history.push("/sign-up");
     }, 1000);
   };
+
+  console.log(wineList);
   return (
     <Layout>
       <section className="landing-section">
@@ -46,6 +85,31 @@ const Home = () => {
             From the taste to the group, only wines worth your time end up on
             our Featured Wines
           </p>
+          <Carousel>
+            {wineList.map((list, index) => (
+              <Carousel.Item key={index}>
+                <Row>
+                  {list.map((wine,index) => (
+                    <Col key={index}>
+                      <Wine key={wine._id} wine={wine} />
+                    </Col>
+                  ))}
+                </Row>
+              </Carousel.Item>
+            ))}
+
+            {/* <Carousel.Item>
+              {brokenWineList[1].map((wine) => {
+                <Wine key={wine._id} wine={wine}/>
+              })}
+            </Carousel.Item>
+            <Carousel.Item>
+              {brokenWineList[2].map((wine) => {
+                <Wine key={wine._id} wine={wine}/>
+              })}
+            </Carousel.Item> */}
+          </Carousel>
+
           <h2>I'm a carousel</h2>
           <button onClick={takeToWines} className="who-button">
             See All Wines
