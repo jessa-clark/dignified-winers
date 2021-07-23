@@ -53,7 +53,7 @@ const WineAdd = (props) => {
         <div className="add-image-container">
           <img className="wine-image" src={wine.imgURL} alt={wine.name} />
         </div>
-        <div className="wine-description-container">
+        <form className="wine-description-container" onSubmit={handleSubmit}>
           <label className="wine-description-label">About the Wine</label>
           <textarea
             className="textarea-description"
@@ -66,7 +66,7 @@ const WineAdd = (props) => {
           <button type="submit" className="add-button">
             <h3>Submit</h3>
           </button>
-        </div>
+        </form>
         <form className="add-form" onSubmit={handleSubmit}>
           <label className="wine-name-label">Wine Name</label>
           <input

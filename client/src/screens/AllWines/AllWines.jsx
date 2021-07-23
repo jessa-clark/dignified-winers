@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+
 import { getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import "./AllWines.css";
 import Layout from "../../components/Layout/Layout";
+import Search from "../../components/Search/Search";
 
 const AllWines = () => {
   const [wines, setWines] = useState([]);
+  const [wineList, setWineList] = useState([]);
   useEffect(() => {
     const getResults = async () => {
       const results = await getWines();
@@ -15,9 +18,10 @@ const AllWines = () => {
   }, []);
   return (
     <Layout>
+      <Search wines={wines} setWineList={setWineList} />
       <div className="all-wines">
-        {wines.length ? (
-          wines.map((wine) => <Wine key={wine._id} wine={wine} />)
+        {wineList.length ? (
+          wineList.map((wine) => <Wine key={wine._id} wine={wine} />)
         ) : (
           <h2>Loading...</h2>
         )}
