@@ -5,7 +5,7 @@ import { getWines } from "../../services/wines";
 
 import Wine from "../../components/Wine/Wine";
 import Layout from "../../components/Layout/Layout";
-import { Carousel, Row, Col } from "react-bootstrap";
+import { Carousel, Row, Col, Container } from "react-bootstrap";
 
 import "./Home.css";
 
@@ -88,13 +88,18 @@ const Home = () => {
           <Carousel>
             {wineList.map((list, index) => (
               <Carousel.Item key={index}>
-                <Row>
+                    <Row>
+                  {/* <Container> */}
+
+
                   {list.map((wine,index) => (
-                    <Col key={index}>
-                      <Wine key={wine._id} wine={wine} />
-                    </Col>
-                  ))}
-                </Row>
+                <Col>
+                    <Wine key={wine._id} wine={wine} />
+                </Col>
+                    
+                    ))}
+                  {/* </Container> */}
+                    </Row>
               </Carousel.Item>
             ))}
           </Carousel>
