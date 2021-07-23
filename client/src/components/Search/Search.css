@@ -1,0 +1,47 @@
+.search-area {
+  background-image: url("./WineRow.jpeg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: bottom right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  color: white;
+}
+
+.search-area input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  z-index: 1;
+  border-bottom: 3px solid white;
+  padding-bottom: 4px;
+  outline: none;
+}
+
+.search-area input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.search-area input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.search-area input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.search-area button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
