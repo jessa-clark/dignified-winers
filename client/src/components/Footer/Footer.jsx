@@ -40,7 +40,7 @@ const Footer = () => {
       <div className="dev-container">
         <p className="dev-name">Jessa Clark</p>
         <div className="dev-logo-container">
-          <a href="www.linkedin.com/in/jessa-clark" target="_blank" rel="noreferrer" className="linkedin-logo">
+          <a href="https://www.linkedin.com/in/jessa-clark" target="_blank" rel="noreferrer" className="linkedin-logo">
           <AiOutlineLinkedin size={50}/>
           </a>
           <a href="https://github.com/jessa-clark" target="_blank" rel="noreferrer" className="github-logo">

@@ -1,10 +1,13 @@
+
 /* landing */
 .landing-section {
   height: 90vh;
+  width: 100vw;
   position: relative;
   
-  background: url("./HomeBanner.jpeg") no-repeat center;
+  background: url("./NewHomeBanner.png") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
 .landing-greeting {
 position: absolute;
@@ -16,18 +19,37 @@ width: 23vw;
 color: white;
 font-size: 3rem;
 }
- .landing-button {
-   height: 3rem;
-   width: 15rem;
-   padding-left: 0.75rem;
+.landing-button {
+  position: absolute;
+  top: 35vh;
+  left: 10vw;
+  height: 3rem;
+  width: 15rem;
+  padding-left: 0.75rem;
 
+  color: #8C0D17;
+  border: none;
+  font-size: 1.5rem;
+  text-align: left;
+  background-color: transparent;
+}
+.landing-button:hover {
+    border-radius: 4px;
+    background-color: #8c0d17;
+    color: #e5e5e5;
+    transition: 0.5s;
+}
+
+ .home-button {
+   height: 2.5rem;
+   width: 15rem;
    color: #8C0D17;
    border: none;
    font-size: 1.5rem;
-   text-align: left;
+   text-align: center;
    background-color: transparent;
  }
- .landing-button:hover {
+ .home-button:hover {
    border-radius: 2px;
    background-color: #8c0d17;
    color: #e5e5e5;
@@ -56,14 +78,56 @@ font-size: 2rem;
  .who-content-text {
   font-size: 1.3rem;
  }
+ .who-button {
+  height: 2.5rem;
+  width: 15rem;
+
+  background-color: #8c0d17;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.who-button:hover {
+  background-color: #8c0d17;
+  color: #e5e5e5;
+  transition: 0.5s;
+}
+
 
  /* winner */
  .winner-wines-container {
 color: white;
  } 
 .winner-wines-title {
-
+  font-size: 2rem;
  }
  .winner-wines-text {
+  font-size: 1.3rem;
+ }
 
+ /* community */
+ .community-section {
+   height: 90vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   background: url("./Collage.jpeg") no-repeat center;
+   background-size: cover;
+   color: white;
+  text-align: center;
+ }
+ .community-title {
+  font-size: 2rem;
+  margin: 2rem 0 ;
+ }
+ .community-text {
+  width: 60vw;
+  padding: 6rem 0;
+  align-self: center;
+
+  background-color: rgba(255,255,255, 0.23);
+  font-size: 1.3rem;
  }
