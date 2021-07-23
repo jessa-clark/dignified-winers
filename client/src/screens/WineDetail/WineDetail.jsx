@@ -59,9 +59,9 @@ const WineDetail = (props) => {
             <Link className="wine-detail-edit-button" to={`/wines/edit/${id}`}>
               Edit
             </Link>
-            <button className="wine-detail-delete-button" onClick={handleSubmit}>
+            <Link className="wine-detail-delete-button" to="/wines" onClick={handleSubmit}>
               Delete
-            </button>
+            </Link>
           </div>
 
         </div>
