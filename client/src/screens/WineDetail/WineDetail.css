@@ -5,6 +5,7 @@
   flex-flow: row wrap;
   align-items: center;
   background-color: #400101;
+
 }
 
 .detail {
@@ -14,10 +15,12 @@
   padding-bottom: 1em;
   margin-bottom: 5em;
   width: 40%;
+
 }
 
 .wine-detail-image {
   width: 40%;
+  margin: 20px auto;
 }
 
 .wine-detail-image img {
@@ -61,25 +64,29 @@
   flex-wrap: nowrap;
   color: white;
   margin: 10px 0 20px;
+
 }
 
 .wine-detail-edit-button {
   background-color: #8c0d17;
   border-radius: 0.3em;
-  padding: 0.3em 1.5em;
-  text-decoration: none;
-  color: white;
+  padding: 0.4em 1.5em;
   font-size: 1.3em;
   margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  justify-content: space-between;
+  height: 3rem;
 }
 
 .wine-detail-delete-button {
   background-color: #8c0d17;
   border-radius: 0.3em;
-  color: white;
+  padding: 0.1em 1em .1em;
   font-size: 1.3em;
-  padding: 0.3em 1.5em;
   border: none;
+  color: white;
+  height: 2.7rem;
 }
 
 .related {
