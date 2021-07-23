@@ -35,7 +35,7 @@ const WineDetail = (props) => {
 
   const handleSubmit = () => {
     const deleteOneWine = async () => {
-      const deleted = await deleteWine(id);
+      await deleteWine(id);
       setTimeout(() => {
         history.push("/wines");
       }, 500);
@@ -66,8 +66,7 @@ const WineDetail = (props) => {
 
         </div>
       </div>
-        <hr />
-          <div className="below-line">
+           <div className="below-line">
             <h1 className="related">Related Wines</h1>
             <div className="all-wines-detail">
               {wines?.length ? (
