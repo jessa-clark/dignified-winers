@@ -12,7 +12,7 @@ import "./Home.css";
 const Home = () => {
   const history = useHistory();
   const [wineList, setWineList] = useState([]);
-  
+
   useEffect(() => {
     const settingBrokenList = (arr, size) => {
       let dividedWineList = [];
@@ -49,11 +49,13 @@ const Home = () => {
       </section>
       <section className="who-section">
         <div className="who-container">
+          <div className="who-image">
+
           <img
-            className="who-image"
             src="/img/TheWiners.jpeg"
             alt="4 wine glasses cheering"
-          />
+            />
+            </div>
           <div className="who-content">
             <h2 className="who-content-title">Who are the Winers?</h2>
             <p className="who-content-text">
@@ -66,6 +68,8 @@ const Home = () => {
             </p>
           </div>
         </div>
+          </section>
+        <section className="winner-section">
         <div className="winner-wines-container">
           <h2 className="winner-wines-title">Winner Wines</h2>
           <p className="winner-wines-text">
@@ -75,18 +79,11 @@ const Home = () => {
           <Carousel>
             {wineList.map((list, index) => (
               <Carousel.Item key={index}>
-                    <Row key={index+100}>
-                  {/* <Container> */}
-
-
-                  {list.map((wine,index) => (
-                <Col key={index-1000}>
-                    <Wine key={wine._id} wine={wine} />
-                </Col>
-                    
-                    ))}
-                  {/* </Container> */}
-                    </Row>
+                <div className="carousel-row" key={index + 100}>
+                  {list.map((wine, index) => (
+                      <Wine key={wine._id} wine={wine} />
+                  ))}
+                </div>
               </Carousel.Item>
             ))}
           </Carousel>

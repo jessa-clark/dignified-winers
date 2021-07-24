@@ -16,12 +16,11 @@
   left: 60vw;
   height: 3rem;
   width: 15rem;
-  padding-left: 0.75rem;
 
   color: #8C0D17;
   border: none;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
   background-color: transparent;
 }
 .landing-button:hover {
@@ -42,20 +41,24 @@
  }
 
  /* who */
- .who-section {
-   height: 110vh;
+ .who-section, .winner-section {
+   /* height: 40vh; */
    margin-top: 8rem;
  }
  .who-container {
    display: flex;
-  width: 90vw;
+  width: 70vw;
  }
  .who-image {
-  width: 20rem;
+  /* width: 50%; */
+  overflow:hidden;
+ }
+ .who-image img {
+   width: 100%;
  }
  .who-content {
   color: white;
-  padding-left: 2rem;
+margin: 2rem 2rem;
  }
  .who-content-title {
 font-size: 2rem;
@@ -118,6 +121,10 @@ margin-top: 4rem;
   font-size: 1.3rem;
  }
 
- .carousel-item{
-   display: flex;
+.carousel-row{
+  display: flex;
+  margin: 2rem auto;
+  text-align: center;
+  justify-content: center;
+   width: 100%;
  }
