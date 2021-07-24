@@ -71,7 +71,8 @@ font-size: 2rem;
  .winner-wines-container {
 color: white;
 text-align: center;
-margin-top: 4rem;
+/* margin-top: 2rem; */
+margin-bottom: 4rem;
  } 
 .winner-wines-title {
   font-size: 2rem;
@@ -121,6 +122,8 @@ margin-top: 4rem;
   font-size: 1.3rem;
  }
 
+
+ /* carousel */
 .carousel-row{
   display: flex;
   margin: 2rem auto;
@@ -128,3 +131,16 @@ margin-top: 4rem;
   justify-content: center;
    width: 100%;
  }
+ .carousel-control-prev {
+   margin-left: -100px;
+  }
+  
+  .carousel-control-next {
+    margin-right: -100px;
+  }
+  
+  /* decreases clickable area of buttons */
+/* .carousel-control-next, .carousel-control-prev {
+ height: 5rem; 
+ margin: auto;
+} */

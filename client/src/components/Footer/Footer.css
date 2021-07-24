@@ -1,3 +1,6 @@
+.footer-container {
+  text-align: center;
+}
 .footer-title, .footer-title-text {
   width: 70vw;
   color: white;
@@ -8,9 +11,6 @@
 }
 .footer-title-text {
 margin:0 auto 2rem;
-}
-.footer-title-text > a {
-  color: rgb(189, 8, 44);
 }
 .footer-dev-container {
   display: flex;
@@ -41,4 +41,8 @@ color: white;
   padding: 1rem 0;
 
   text-align:center;
+}
+.octocat > img{
+  height: 5rem;
+  margin-bottom: 1rem;
 }
