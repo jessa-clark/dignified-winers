@@ -5,7 +5,7 @@ import { getWines } from "../../services/wines";
 
 import Wine from "../../components/Wine/Wine";
 import Layout from "../../components/Layout/Layout";
-import { Carousel, Row, Col, Container } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 import "./Home.css";
 
