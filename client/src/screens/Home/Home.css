@@ -164,7 +164,6 @@ margin-bottom: 4rem;
  margin: auto;
 } */
 
-
 @media screen and (max-width: 1025px) {
   .landing-section {
     background: url("./HomeBanner.jpeg") no-repeat center;
