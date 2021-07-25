@@ -12,6 +12,10 @@ import "./Home.css";
 const Home = () => {
   const history = useHistory();
   const [wineList, setWineList] = useState([]);
+  const [singleWine, setSingleWine] = useState([]);
+  const [width, setWidth] = useState(window.innerWidth);
+  const ipad = 900;
+  const mobile = 500;
 
   useEffect(() => {
     const settingBrokenList = (arr, size) => {
@@ -25,9 +29,19 @@ const Home = () => {
     const fetchWines = async () => {
       const allWines = await getWines();
       setWineList(settingBrokenList([...allWines], 3));
+
+      const singleList = settingBrokenList([...allWines], 3)[0];
+      setSingleWine([...singleList]);
     };
     fetchWines();
+
+    // making window size a state for conditional rendering of carousel items
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth))
+
+    return () => window.removeEventListener("resize", handleWindowResize)
   }, []);
+  console.log(singleWine);
 
   const takeToWines = () => {
     setTimeout(() => {
@@ -50,12 +64,8 @@ const Home = () => {
       <section className="who-section">
         <div className="who-container">
           <div className="who-image">
-
-          <img
-            src="/img/TheWiners.jpeg"
-            alt="4 wine glasses cheering"
-            />
-            </div>
+            <img src="/img/TheWiners.jpeg" alt="4 wine glasses cheering" />
+          </div>
           <div className="who-content">
             <h2 className="who-content-title">Who are the Winers?</h2>
             <p className="who-content-text">
@@ -68,8 +78,8 @@ const Home = () => {
             </p>
           </div>
         </div>
-          </section>
-        <section className="winner-section">
+      </section>
+      <section className="winner-section">
         <div className="winner-wines-container">
           <h2 className="winner-wines-title">Winner Wines</h2>
           <p className="winner-wines-text">
@@ -77,15 +87,23 @@ const Home = () => {
             our Featured Wines
           </p>
           <Carousel>
-            {wineList.map((list, index) => (
-              <Carousel.Item key={index}>
-                <div className="carousel-row" key={index + 100}>
-                  {list.map((wine, index) => (
+            {width > ipad
+              ? wineList.map((list, index) => (
+                  <Carousel.Item key={index}>
+                    <div className="carousel-row" key={index + 100}>
+                      {list.map((wine, index) => (
+                        <Wine key={wine._id} wine={wine} />
+                      ))}
+                    </div>
+                  </Carousel.Item>
+                ))
+              : singleWine.map((wine, index) => (
+                  <Carousel.Item key={index}>
+                    <div className="carousel-row" key={index + 100}>
                       <Wine key={wine._id} wine={wine} />
-                  ))}
-                </div>
-              </Carousel.Item>
-            ))}
+                    </div>
+                  </Carousel.Item>
+                ))}
           </Carousel>
           <button onClick={takeToWines} className="who-button">
             See All Wines
