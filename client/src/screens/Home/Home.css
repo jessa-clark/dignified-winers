@@ -164,47 +164,6 @@ margin-bottom: 4rem;
  margin: auto;
 } */
 
-/* responsive list 
-* nav 
-- [ ] hamburger menu or list links directly below logo, may work out better since title is very long on mobile
-** ipad 
-
-* landing
- - [ ] landing image must cycle appropriately
- - [ ] button font size should scale
- 
- * who 
- - [ ] display should flex into column 
-
- * winner 
- - [ ] carousel should scale down to display only 1 or 2 wines 
- - [ ] carousel buttons need to fit back into viewport
- 
- * community 
- - [ ] text should be justified and aligned to center
- - [ ] ? title may need additional styling due to conflict of colors
-
-
- ** iphone
- *layout 
- - [ ] seems to be wider than viewport
-
- * landing
- - [ ] ! landing button responds poorly
-
- * who 
- - [ ] content is weird, should increase width and text align to center
-
- * winner 
- - [ ] should only display 1 wine
-
- * community 
- - [ ] justify content center should fix this issue 
-
- * footer 
- - [ ] display should be set to column
- - [ ] ? border bottom line
-*/
 
 @media screen and (max-width: 1025px) {
   .landing-section {
