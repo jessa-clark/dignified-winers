@@ -116,7 +116,6 @@ const WineAdd = (props) => {
             autoFocus
             onChange={handleChange}
           >
-            <option value="dropdown">Select Type</option>
             <option value="red">red</option>
             <option value="white">white</option>
             <option value="specialty">specialty</option>
