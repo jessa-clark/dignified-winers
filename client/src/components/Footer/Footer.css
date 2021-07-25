@@ -47,3 +47,16 @@
   height: 5rem;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .octocat > img {
+    margin-bottom: 5rem;
+  }
+  .footer-dev-container {
+    flex-direction: column;
+    height:unset;
+  }
+  .dev-container {
+    width: 100vw;
+  }
+}
