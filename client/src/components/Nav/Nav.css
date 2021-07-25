@@ -44,3 +44,14 @@
 .navbar-right-container > *:hover {
   color: #ab8f7f;
 }
+
+@media screen and (max-width: 500px ) {
+  .navbar {
+    height: fit-content;
+  }
+  .navbar-right-container {
+    justify-content:space-evenly;
+    padding-right: 0;
+    width: 100%;
+  }
+}
