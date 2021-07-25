@@ -16,19 +16,22 @@
   left: 60vw;
   height: 3rem;
   width: 15rem;
-  padding-left: 0.75rem;
 
   color: #8C0D17;
   border: none;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
   background-color: transparent;
+
+  background-image: linear-gradient(45deg, #8c0d17 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 400ms ease-in-out;
 }
 .landing-button:hover {
     border-radius: 4px;
-    background-color: #8c0d17;
     color: #e5e5e5;
-    transition: 0.5s;
+    background-position: 0;
 }
 
  .home-button {
@@ -42,20 +45,24 @@
  }
 
  /* who */
- .who-section {
-   height: 90vh;
+ .who-section, .winner-section {
+   /* height: 40vh; */
    margin-top: 8rem;
  }
  .who-container {
    display: flex;
-  width: 90vw;
+  width: 70vw;
  }
  .who-image {
-  width: 20rem;
+  /* width: 50%; */
+  overflow:hidden;
+ }
+ .who-image img {
+   width: 100%;
  }
  .who-content {
   color: white;
-  padding-left: 2rem;
+margin: 2rem 2rem;
  }
  .who-content-title {
 font-size: 2rem;
@@ -68,7 +75,8 @@ font-size: 2rem;
  .winner-wines-container {
 color: white;
 text-align: center;
-margin-top: 4rem;
+/* margin-top: 2rem; */
+margin-bottom: 4rem;
  } 
 .winner-wines-title {
   font-size: 2rem;
@@ -104,20 +112,98 @@ margin-top: 4rem;
  .community-section::backdrop {
    background-color: rgba(0,0,0,1)
  }
- .community-title {
-  font-size: 2rem;
-  margin: 2rem 0 ;
+ .community-content {
+   display: flex;
+   flex-flow:column;
+   justify-content: center;
  }
+ .community-title {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+
+  font-size: 4rem;
+  padding: 0 2rem;
+  margin: 2rem auto ;
+ }
+
  .community-text {
   width: 60vw;
   padding: 2rem 0;
   margin: 4rem 0;
   align-self: center;
 
-  background-color: rgba(255,255,255, 0.23);
+  /* background-color: rgba(255,255,255, 0.23); */
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
   font-size: 1.3rem;
  }
-
- .carousel-item{
-   display: flex;
+ .community-button {
+   align-self: center;
  }
+
+
+ /* carousel */
+.carousel-row{
+  display: flex;
+  margin: 2rem auto;
+  text-align: center;
+  justify-content: center;
+   width: 100%;
+ }
+ .carousel-control-prev {
+   margin-left: -100px;
+  }
+  
+  .carousel-control-next {
+    margin-right: -100px;
+  }
+  
+  /* decreases clickable area of buttons */
+/* .carousel-control-next, .carousel-control-prev {
+ height: 5rem; 
+ margin: auto;
+} */
+
+/* responsive list 
+* nav 
+- [ ] hamburger menu or list links directly below logo, may work out better since title is very long on mobile
+** ipad 
+
+* landing
+ - [ ] landing image must cycle appropriately
+ - [ ] button font size should scale
+ 
+ * who 
+ - [ ] display should flex into column 
+
+ * winner 
+ - [ ] carousel should scale down to display only 1 or 2 wines 
+ - [ ] carousel buttons need to fit back into viewport
+ 
+ * community 
+ - [ ] text should be justified and aligned to center
+ - [ ] ? title may need additional styling due to conflict of colors
+
+
+ ** iphone
+ *layout 
+ - [ ] seems to be wider than viewport
+
+ * landing
+ - [ ] ! landing button responds poorly
+
+ * who 
+ - [ ] content is weird, should increase width and text align to center
+
+ * winner 
+ - [ ] should only display 1 wine
+
+ * community 
+ - [ ] justify content center should fix this issue 
+
+ * footer 
+ - [ ] display should be set to column
+ - [ ] ? border bottom line
+*/
+
+/* @media screen and () */
