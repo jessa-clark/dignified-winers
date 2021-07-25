@@ -56,8 +56,8 @@
  .who-image {
   /* width: 50%; */
   overflow:hidden;
- }
- .who-image img {
+}
+.who-image img {
    width: 100%;
  }
  .who-content {
@@ -206,4 +206,54 @@ margin-bottom: 4rem;
  - [ ] ? border bottom line
 */
 
-/* @media screen and () */
+@media screen and (max-width: 1025px) {
+  .landing-section {
+    background: url("./HomeBanner.jpeg") no-repeat center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing-text {
+  width: 30%;
+  margin-left: 60vw;
+  margin-bottom: 15vh;
+
+  text-align: left;
+  color: white;
+  font-size: 4rem;
+  line-height: 1.4;
+  /* margin-left: 100vw; */
+}
+.landing-button {
+  left: 59vw;
+  top: 66vh;
+}
+.carousel-row {
+  width: 70%;
+}
+  .carousel-control-next {
+  margin: 0;
+  }
+  .carousel-control-prev {
+    margin: 0;
+    }
+
+    /* who */
+    .who-container {
+      flex-direction: column;
+    }
+    .who-image {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .who-content-title {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* winner */
+    .winner-section{
+      margin-top: 4rem;
+    }
+}

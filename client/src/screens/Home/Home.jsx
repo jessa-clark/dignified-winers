@@ -14,7 +14,7 @@ const Home = () => {
   const [wineList, setWineList] = useState([]);
   const [singleWine, setSingleWine] = useState([]);
   const [width, setWidth] = useState(window.innerWidth);
-  const ipad = 900;
+  const ipad = 1025;
   const mobile = 500;
 
   useEffect(() => {
@@ -57,9 +57,18 @@ const Home = () => {
   return (
     <Layout>
       <section className="landing-section">
-        <button onClick={takeToWines} className="landing-button">
+        {width < ipad ? (<div className="landing-container">
+          <h2 className="landing-text">
+            Welcome, to the world of wine.
+          </h2>
+          <button onClick={takeToWines} className="landing-button">
           Browse our Wines
         </button>
+        </div>) : (
+          <button onClick={takeToWines} className="landing-button">
+          Browse our Wines
+        </button>
+        )}
       </section>
       <section className="who-section">
         <div className="who-container">
