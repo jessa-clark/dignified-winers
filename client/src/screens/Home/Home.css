@@ -257,3 +257,34 @@ margin-bottom: 4rem;
       margin-top: 4rem;
     }
 }
+@media screen and (max-width: 500px) {
+.landing-text {
+font-size: 2.5rem;
+margin-left: 49vw;
+margin-bottom: 0;
+}
+.landing-button {
+  left: 35vw;
+}
+
+/* who */
+.who-content {
+  margin: 2rem 0;
+}
+.who-image {
+  width: 100%;
+}
+
+/* community */
+.community-section {
+  height: 100vh;
+}
+.community-title {
+  width: 82%;
+}
+.community-text {
+  width: 90%;
+  line-height: 2;
+}
+
+}
