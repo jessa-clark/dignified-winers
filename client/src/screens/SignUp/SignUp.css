@@ -75,8 +75,33 @@
   color: rgba(255, 255, 255, 0.756);
 }
 
+
+@media screen and (max-width: 757px) {
+  .sign-up-screen-text {
+    margin: 50px 0 0;
+    width: 90%;
+  }
+
+  .sign-up-screen-text h2 {
+    font-size: 2rem;
+  }
+
+  .sign-up-screen-text p {
+    font-size: 1rem;
+  }
+
+  .sign-up-screen-form {
+    margin: 10px 0;
+  }
+
+  .sign-up-screen-form input {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .sign-up-screen-form {
     width: 95%;
   }
 }
+

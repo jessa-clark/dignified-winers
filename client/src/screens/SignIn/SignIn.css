@@ -73,3 +73,26 @@
 .sign-up-link:hover {
   color: rgba(255, 255, 255, 0.756);
 }
+
+@media screen and (max-width: 757px) {
+  .sign-in-screen-text {
+    margin: 50px 0 0;
+    width: 90%;
+  }
+
+  .sign-in-screen-text h2 {
+    font-size: 2rem;
+  }
+
+  .sign-in-screen-text p {
+    font-size: 1rem;
+  }
+
+  .sign-in-screen-form {
+    margin: 10px 0;
+  }
+
+  .sign-in-screen-form input {
+    font-size: 20px;
+  }
+}
