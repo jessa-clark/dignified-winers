@@ -23,9 +23,16 @@
 }
 
 .add-image-container {
+  grid-area: A;
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.image-preview {
+  grid-area: A;
+  font-family: inherit;
+  margin-top: 5vh;
 }
 
 .wine-image {
@@ -35,7 +42,7 @@
   max-width: 26.042vw;
   height: auto;
   max-height: 73.52941176470588vh;
-  margin-top: 11.68vh;
+  margin-top: 1vh;
   overflow: hidden;
   padding: 0;
 }
@@ -53,8 +60,8 @@
 }
 
 .textarea-description {
-  width: 56.61vw;
-  height: 400px;
+  width: 62vw;
+  height: 45vh;
   margin-bottom: 3vh;
   overflow-wrap: break-word;
   resize: none;
@@ -174,10 +181,13 @@
     height: auto;
     margin: 0;
     align-items: center;
+    grid-area: C;
   }
 
+  .image-preview {
+    text-align: center;
+  }
   .wine-image {
-    grid-area: B;
     padding: 0;
     max-width: 80%;
     max-height: 80%;
@@ -200,14 +210,14 @@
     padding-left: 5px;
     text-align: center;
     height: 8vh;
-    font-size: 2.25rem;
+    font-size: 1.3rem;
   }
 
   .input-vineyard {
     width: 75vw;
     padding-left: 5px;
     height: 8vh;
-    font-size: 2.25rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
@@ -215,7 +225,7 @@
     width: 37.7vw;
     padding-left: 5px;
     height: 8vh;
-    font-size: 2.25rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
@@ -223,7 +233,7 @@
     width: 75vw;
     padding-left: .4rem;
     height: 8vh;
-    font-size: 2.25rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
@@ -239,7 +249,7 @@
     width: 75vw;
     padding-left: .4rem;
     height: 300px;
-    font-size: 2.25rem;
+    font-size: 1.3rem;
   }
 
   .wine-name-label {
