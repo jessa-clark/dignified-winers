@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <h3 className="footer-title">Thanks for Wining! </h3>
-      <p className="footer-title-text">Below credits the 4 talented developers who made this site possible! If you'd like to see the repository for this website in particular, you can click <a href="https://github.com/jessa-clark/dignified-winers" target="_blank" rel="noreferrer" alt="dignified winers repository link">here!</a></p>
+      <p className="footer-title-text">The 4 talented developers who made this site possibleare credited below!  If you'd like to see the repository for this website in particular, OctoCat will show you the way.</p>
+      <a href="https://github.com/jessa-clark/dignified-winers" target="_blank" rel="noreferrer" alt="dignified winers repository link"
+      className="octocat"><img src="/img/octocat-kenobi.png" alt="github 404 octo-cat" /> </a>
       <div className="footer-dev-container">
       <div className="dev-container">
         <p className="dev-name">Rahul Joshi</p>

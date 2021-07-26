@@ -45,3 +45,9 @@
   cursor: pointer;
   color: inherit;
 }
+
+@media screen and (max-width: 757px) {
+  .search-area input {
+    font-size: 30px;
+  }
+}
