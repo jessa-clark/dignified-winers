@@ -11,5 +11,8 @@ router.get("/verify", controllers.verify);
 
 router.get("/users/:id/wines", controllers.getUserWines);
 router.get("/users/:id/wines/:wineId", controllers.getUserWine);
+router.post("/users/:id/wines", controllers.createUserWine);
+router.put("/users/:id/wines/:wineId", controllers.updateUserWine);
+router.post("/users/:id/wines/:wineId", controllers.deleteUserWine);
 
 export default router;
