@@ -33,7 +33,9 @@ const WineDetail = (props) => {
     return <h1>Loading ...</h1>;
   }
 
-  const handleSubmit = () => {
+  
+
+   const handleSubmit = () => {
     const deleteOneWine = async () => {
       await deleteWine(id);
       setTimeout(() => {
@@ -52,7 +54,7 @@ const WineDetail = (props) => {
         </div>
         <div className="detail">
           <div className="wine-detail-name">{wine.name}</div>
-          <div className="wine-detail-vineyard">{`${wine.vineyard} Vineyard`}</div>
+          <div className="wine-detail-vineyard"> {wine.vineyard.toLowerCase().includes("vineyard") ? wine.vineyard : `${wine.vineyard} Vineyard`}</div>
           <div className="wine-detail-year">{wine.year}</div>
           <div className="wine-detail-description">{wine.description}</div>
           <div className="wine-detail-button-container">

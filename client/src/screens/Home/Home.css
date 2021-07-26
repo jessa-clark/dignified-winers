@@ -69,24 +69,25 @@
 }
 .who-content-text {
   font-size: 1.3rem;
-}
+ }
 
-/* winner */
-.winner-wines-container {
-  color: white;
-  text-align: center;
-  /* margin-top: 2rem; */
-  margin-bottom: 4rem;
-}
+ /* winner */
+ .winner-wines-container {
+color: white;
+text-align: center;
+/* margin-top: 2rem; */
+margin-bottom: 4rem;
+} 
 .winner-wines-title {
   font-size: 2rem;
 }
 .winner-wines-text {
+   width: 70vw;
   font-size: 1.3rem;
-}
-/* winner + community button */
-.who-button,
-.community-button {
+  margin: 0 auto;
+ }
+ /* winner + community button */
+ .who-button, .community-button {
   height: 2.5rem;
   width: 17rem;
 
