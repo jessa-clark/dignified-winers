@@ -15,7 +15,6 @@ const Home = () => {
   const [singleWine, setSingleWine] = useState([]);
   const [width, setWidth] = useState(window.innerWidth);
   const ipad = 1025;
-  const mobile = 500;
 
   useEffect(() => {
     const settingBrokenList = (arr, size) => {
