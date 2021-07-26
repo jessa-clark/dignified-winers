@@ -1,4 +1,4 @@
-# Dignified Winers
+# [Dignified Winers](https://dignified-winers.netlify.app)
 
 ## Project Description
 
@@ -39,13 +39,13 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 
 | Day     | Deliverable                                                   | Status   |
 | ------- | ------------------------------------------------------------- | -------- |
-| July 19 | App Brainstorming / Design draft / Tech Strategy              | Complete |
+| July 19 | App Brainstorming / Design Draft / Tech Strategy              | Complete |
 | July 20 | Project Approval / Backend PP                                 | Complete |
-| July 21 | Front-end skeleton PP / React Component skeletons             | To Do    |
-| July 22 | React component conclusion with CRUD / CSS Components         | To Do    |
-| July 23 | MVP desktop designs / deploy desktop site / responsive design | To Do    |
-| July 26 | Finalize responsive design / POST MVP(seperate branch)        | To Do    |
-| July 27 | Advanced CSS / final touches / POST MVP completion            | To Do    |
+| July 21 | Front-End Skeleton PP / React Component Skeletons             | Complete |
+| July 22 | React Component Conclusion With CRUD / CSS Components         | Complete |
+| July 23 | MVP Desktop Designs / Deploy Desktop Site / Responsive Design | Complete |
+| July 26 | Finalize Responsive Resign / Post MVP(separate branch)        | To Do    |
+| July 27 | Advanced CSS / Final Touches / Post MVP Completion            | To Do    |
 | July 28 | Presentations                                                 | To Do    |
 
 ## Team Expectations

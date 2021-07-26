@@ -12,21 +12,27 @@
   display: grid;
   background-color: #400101;
   color: white;
-  width: 65.60vw;
+  width: 65.6vw;
   height: 132.31vh;
   justify-content: center;
   column-gap: 30vw;
-  grid-template-areas: 
-  "A B"
-  "A B"
-  "C C"
-  ;
+  grid-template-areas:
+    "A B"
+    "A B"
+    "C C";
 }
 
 .add-image-container {
+  grid-area: A;
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.image-preview {
+  grid-area: A;
+  font-family: inherit;
+  margin-top: 5vh;
 }
 
 .wine-image {
@@ -36,8 +42,9 @@
   max-width: 26.042vw;
   height: auto;
   max-height: 73.52941176470588vh;
-  margin-top: 11.68vh;
+  margin-top: 1vh;
   overflow: hidden;
+  padding: 0;
 }
 
 .wine-description-container {
@@ -53,10 +60,10 @@
 }
 
 .textarea-description {
-  width: 56.61vw;
-  height: 400px;
+  width: 62vw;
+  height: 45vh;
   margin-bottom: 3vh;
-  overflow-wrap:break-word;
+  overflow-wrap: break-word;
   resize: none;
   padding: 10px;
   font-size: 1.25rem;
@@ -66,14 +73,15 @@
   width: 11.35vw;
   height: 2.5rem;
   border: none;
-  padding-top: .3rem;
+  padding-top: 0.3rem;
   align-content: center;
   border-radius: 0.52vw;
-  background-color: #8C0D17;
+  background-color: #8c0d17;
   color: white;
   text-align: center;
   align-self: center;
   justify-content: center;
+  margin: 0;
 }
 
 .add-form {
@@ -87,7 +95,7 @@
 }
 
 .wine-name-label {
-font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .input-name {
@@ -137,4 +145,160 @@ font-size: 1.25rem;
 .dropdown-type {
   width: 26.5vw;
   height: 5.47vh;
+}
+
+@media screen and (max-width: 1025px) {
+  .heading-wine-add {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+  }
+
+  .add-form-container {
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+      "A"
+      "B"
+      "C";
+  }
+
+  .add-form {
+    grid-area: A;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .add-image-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    align-items: center;
+    grid-area: C;
+  }
+
+  .image-preview {
+    text-align: center;
+  }
+  .wine-image {
+    padding: 0;
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+    margin-left: 10vw;
+    margin-bottom: 2.84vh;
+    margin-top: 0;
+    overflow:hidden;
+    position: relative;
+  }
+
+  .wine-description-container {
+    grid-area: B;
+    width: 100%;
+    align-items: center;
+  }
+
+  .input-name {
+    width: 75vw;
+    padding-left: 5px;
+    text-align: left;
+    height: 8vh;
+    font-size: 1.3rem;
+  }
+
+  .input-vineyard {
+    width: 75vw;
+    padding-left: 5px;
+    height: 8vh;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .input-year {
+    width: 37.7vw;
+    padding-left: 5px;
+    height: 8vh;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .input-image-link {
+    width: 75vw;
+    padding-left: .4rem;
+    height: 8vh;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .dropdown-type {
+    width: 37.7vw;
+    padding-left: 5px;
+    height: 8vh;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .textarea-description {
+    width: 75vw;
+    padding-left: .4rem;
+    height: 300px;
+    font-size: 1.3rem;
+  }
+
+  .wine-name-label {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vineyard-name-label{
+    font-size: 2.25rem;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .year-label {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .image-link-label {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .dropdown-type-label {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .wine-description-label {
+    margin-top: .75rem;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .add-button {
+    height: 80px;
+    width: 200px;
+    margin-top: 7vh;
+    margin-bottom: 0;
+  }
 }

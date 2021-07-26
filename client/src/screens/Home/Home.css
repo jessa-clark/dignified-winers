@@ -1,12 +1,11 @@
-
 /* landing */
 .landing-section {
   height: 90vh;
   width: 100vw;
   position: relative;
-  
+
   background: url("./NewHomeBanner3.png") no-repeat center;
-  background-size:cover;
+  background-size: cover;
   /* background url will have to change based on responsiveness */
 }
 
@@ -16,51 +15,59 @@
   left: 60vw;
   height: 3rem;
   width: 15rem;
-  padding-left: 0.75rem;
 
-  color: #8C0D17;
+  color: #8c0d17;
   border: none;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
   background-color: transparent;
+
+  background-image: linear-gradient(45deg, #8c0d17 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 400ms ease-in-out;
 }
 .landing-button:hover {
-    border-radius: 4px;
-    background-color: #8c0d17;
-    color: #e5e5e5;
-    transition: 0.5s;
+  border-radius: 4px;
+  color: #e5e5e5;
+  background-position: 0;
 }
 
- .home-button {
-   height: 2.5rem;
-   width: 15rem;
-   color: #8C0D17;
-   border: none;
-   font-size: 1.5rem;
-   text-align: center;
-   background-color: transparent;
- }
+.home-button {
+  height: 2.5rem;
+  width: 15rem;
+  color: #8c0d17;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: transparent;
+}
 
- /* who */
- .who-section {
-   height: 90vh;
-   margin-top: 8rem;
- }
- .who-container {
-   display: flex;
-  width: 90vw;
- }
- .who-image {
-  width: 20rem;
- }
- .who-content {
+/* who */
+.who-section,
+.winner-section {
+  /* height: 40vh; */
+  margin-top: 8rem;
+}
+.who-container {
+  display: flex;
+  width: 70vw;
+}
+.who-image {
+  /* width: 50%; */
+  overflow: hidden;
+}
+.who-image img {
+  width: 100%;
+}
+.who-content {
   color: white;
-  padding-left: 2rem;
- }
- .who-content-title {
-font-size: 2rem;
- }
- .who-content-text {
+  margin: 2rem 2rem;
+}
+.who-content-title {
+  font-size: 2rem;
+}
+.who-content-text {
   font-size: 1.3rem;
  }
 
@@ -68,13 +75,16 @@ font-size: 2rem;
  .winner-wines-container {
 color: white;
 text-align: center;
-margin-top: 4rem;
- } 
+/* margin-top: 2rem; */
+margin-bottom: 4rem;
+} 
 .winner-wines-title {
   font-size: 2rem;
- }
- .winner-wines-text {
+}
+.winner-wines-text {
+   width: 70vw;
   font-size: 1.3rem;
+  margin: 0 auto;
  }
  /* winner + community button */
  .who-button, .community-button {
@@ -89,35 +99,149 @@ margin-top: 4rem;
   text-align: center;
 }
 
- /* community */
- .community-section {
-   height: 90vh;
-   width: 100vw;
-   display: flex;
-   justify-content: center;
-   background: url("./Collage.jpeg") no-repeat center;
-   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url("./Collage.jpeg");
-   background-size: cover;
-   color: white;
+/* community */
+.community-section {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: url("./Collage.jpeg") no-repeat center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./Collage.jpeg");
+  background-size: cover;
+  color: white;
   text-align: center;
- }
- .community-section::backdrop {
-   background-color: rgba(0,0,0,1)
- }
- .community-title {
-  font-size: 2rem;
-  margin: 2rem 0 ;
- }
- .community-text {
+}
+.community-section::backdrop {
+  background-color: rgba(0, 0, 0, 1);
+}
+.community-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.community-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+
+  font-size: 4rem;
+  padding: 0 2rem;
+  margin: 2rem auto;
+}
+
+.community-text {
   width: 60vw;
   padding: 2rem 0;
   margin: 4rem 0;
   align-self: center;
 
-  background-color: rgba(255,255,255, 0.23);
+  /* background-color: rgba(255,255,255, 0.23); */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
   font-size: 1.3rem;
- }
+}
+.community-button {
+  align-self: center;
+}
 
- .carousel-item{
-   display: flex;
- }
+/* carousel */
+.carousel-row {
+  display: flex;
+  margin: 2rem auto;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.carousel-control-prev {
+  margin-left: -100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
+}
+
+/* decreases clickable area of buttons */
+/* .carousel-control-next, .carousel-control-prev {
+ height: 5rem; 
+ margin: auto;
+} */
+
+@media screen and (max-width: 1025px) {
+  .landing-section {
+    background: url("./HomeBanner.jpeg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .landing-text {
+    color: white;
+    font-size: 4rem;
+    line-height: 1.4;
+    width: 90%;
+  }
+  .landing-button {
+    position: static;
+  }
+  .carousel-row {
+    width: 70%;
+  }
+  .carousel-control-next {
+    margin: 0;
+  }
+  .carousel-control-prev {
+    margin: 0;
+  }
+
+  /* who */
+  .who-container {
+    flex-direction: column;
+  }
+  .who-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .who-content-title {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  /* winner */
+  .winner-section {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .landing-text {
+    font-size: 2.5rem;
+  }
+
+  /* who */
+  .who-content {
+    margin: 2rem 0;
+  }
+  .who-image {
+    width: 100%;
+  }
+
+  /* community */
+  .community-section {
+    height: 100vh;
+  }
+  .community-title {
+    width: 82%;
+  }
+  .community-text {
+    width: 90%;
+    line-height: 2;
+  }
+}
