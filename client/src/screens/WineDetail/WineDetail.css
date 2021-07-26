@@ -81,6 +81,14 @@
   justify-content: space-between;
 }
 
+.wine-detail-delete-button:hover {
+  color: rgba(255, 255, 255, 0.756);
+}
+
+.wine-detail-edit-button:hover {
+  color: rgba(255, 255, 255, 0.756);
+}
+
 /* background-color: #8c0d17;
   border-radius: 0.3em;
   padding: 0.1em 1em .1em;
