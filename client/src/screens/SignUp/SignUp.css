@@ -74,3 +74,9 @@
 .sign-in-link:hover {
   color: rgba(255, 255, 255, 0.756);
 }
+
+@media screen and (max-width: 500px) {
+  .sign-up-screen-form {
+    width: 95%;
+  }
+}
