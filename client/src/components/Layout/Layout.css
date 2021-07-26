@@ -1,6 +1,12 @@
 .layout-children-container {
-  padding-top: 8rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .layout-children-container {
+    padding-top: 8rem;
+  }
 }

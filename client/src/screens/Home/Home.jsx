@@ -36,9 +36,9 @@ const Home = () => {
 
     // making window size a state for conditional rendering of carousel items
     const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth))
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
 
-    return () => window.removeEventListener("resize", handleWindowResize)
+    return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
   const takeToWines = () => {
@@ -55,17 +55,17 @@ const Home = () => {
   return (
     <Layout>
       <section className="landing-section">
-        {width < ipad ? (<div className="landing-container">
-          <h2 className="landing-text">
-            Welcome, to the world of wine.
-          </h2>
+        {width < ipad ? (
+          <div className="landing-container">
+            <h2 className="landing-text">Welcome to the world of wine.</h2>
+            <button onClick={takeToWines} className="landing-button">
+              Browse our Wines
+            </button>
+          </div>
+        ) : (
           <button onClick={takeToWines} className="landing-button">
-          Browse our Wines
-        </button>
-        </div>) : (
-          <button onClick={takeToWines} className="landing-button">
-          Browse our Wines
-        </button>
+            Browse our Wines
+          </button>
         )}
       </section>
       <section className="who-section">

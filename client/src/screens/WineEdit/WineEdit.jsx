@@ -60,6 +60,7 @@ const WineEdit = (props) => {
       </div>
       <div className="edit-form-container">
         <div className="edit-image-container">
+          <p className="image-preview">image preview</p>
           <img className="edit-wine-image" src={wine.imgURL} alt={wine.name} />
         </div>
         <form
