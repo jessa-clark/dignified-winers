@@ -11,9 +11,14 @@
   padding: 10px;
   margin: 10px;
   border-radius: 6px;
-  justify-self: flex-end;
 }
 
 .sort-dropdown select:focus {
   outline: none;
+}
+
+@media screen and (max-width: 757px) {
+  .sort-dropdown {
+    justify-content: center;
+  }
 }

@@ -48,13 +48,18 @@
   margin-bottom: 1rem;
 }
 
+.linkedin-logo:hover,
+.github-logo:hover {
+  color: #ab8f7f;
+}
+
 @media screen and (max-width: 500px) {
   .octocat > img {
     margin-bottom: 5rem;
   }
   .footer-dev-container {
     flex-direction: column;
-    height:unset;
+    height: unset;
   }
   .dev-container {
     width: 100vw;

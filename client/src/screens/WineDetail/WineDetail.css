@@ -5,6 +5,7 @@
   flex-flow: row wrap;
   align-items: center;
   background-color: #400101;
+  padding: 50px 0;
 }
 
 .detail {

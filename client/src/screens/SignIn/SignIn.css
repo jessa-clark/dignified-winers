@@ -90,9 +90,16 @@
 
   .sign-in-screen-form {
     margin: 10px 0;
+    width: 80vw;
   }
 
   .sign-in-screen-form input {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sign-in-screen-form {
+    width: 95%;
   }
 }
