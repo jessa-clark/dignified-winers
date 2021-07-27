@@ -3,6 +3,8 @@
   display: flex;
   justify-content: flex-end;
 }
+
+
 .sort-dropdown select {
   background-color: #8c0d17;
   color: white;
@@ -11,6 +13,19 @@
   padding: 10px;
   margin: 10px;
   border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper::after {
+  content: "▼";
+  color: white;
+  font-size: 1rem;
+  top: 38%;
+  right: 15%;
+  position: absolute;
 }
 
 .sort-dropdown select:focus {
