@@ -4,3 +4,9 @@
   margin: 10px 20px;
   width: 45%;
 }
+
+@media screen and (max-width: 1024px) {
+  .review {
+    width: 90%;
+  }
+}
