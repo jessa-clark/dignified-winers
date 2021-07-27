@@ -65,7 +65,7 @@
 }
 
 .wine-detail-edit-button,
-.wine-detail-delete-button {
+.wine-detail-delete-button, .sign-up-to-wine-button {
   background-color: #8c0d17;
   border: none;
   border-radius: 0.3em;
@@ -82,6 +82,10 @@
 }
 
 .wine-detail-edit-button:hover {
+  color: rgba(255, 255, 255, 0.756);
+}
+
+.sign-up-to-wine-button:hover {
   color: rgba(255, 255, 255, 0.756);
 }
 
