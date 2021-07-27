@@ -1,5 +1,6 @@
 import api from "./apiConfig";
 import jwtDecode from "jwt-decode";
+
 export const signUp = async (credentials) => {
   try {
     const res = await api.post("/sign-up", credentials);
@@ -36,4 +37,13 @@ export const verify = async () => {
     return res.data;
   }
   return false;
+};
+
+export const getUserWine = async (userId, wineId) => {
+  try {
+    const response = await api.get(`/users/${userId}/wines/${wineId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
 };
