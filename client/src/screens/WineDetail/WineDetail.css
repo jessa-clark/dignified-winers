@@ -1,4 +1,6 @@
-.wine-detail {
+.detail-section,
+.reviews-section,
+.related-section {
   display: flex;
   justify-content: space-evenly;
   border-bottom: 1px solid white;
@@ -7,22 +9,18 @@
   background-color: #400101;
   padding: 50px 0;
 }
-
-.detail {
+.wine-detail-image img {
+  width: 100%;
+}
+.wine-detail-text {
   display: flex;
   flex-direction: column;
   border-width: 0.1em;
-  padding-bottom: 1em;
-  margin-bottom: 5em;
   width: 40%;
 }
 
 .wine-detail-image {
   width: 40%;
-}
-
-.wine-detail-image img {
-  width: 100%;
 }
 
 .wine-detail-name {
@@ -44,8 +42,7 @@
   margin: 5px 0;
 }
 
-.wine-detail-year {
-  font-family: Lustria;
+.wine-detail-rating {
   font-style: normal;
   font-weight: normal;
   font-size: 1.3em;
@@ -65,7 +62,8 @@
 }
 
 .wine-detail-edit-button,
-.wine-detail-delete-button, .sign-up-to-wine-button {
+.wine-detail-delete-button,
+.sign-up-to-wine-button {
   background-color: #8c0d17;
   border: none;
   border-radius: 0.3em;
@@ -85,28 +83,25 @@
   color: rgba(255, 255, 255, 0.756);
 }
 
-.sign-up-to-wine-button:hover {
-  color: rgba(255, 255, 255, 0.756);
+.wine-detail-sign-up-to-wine-button:hover {
+  color: #ab8f7f;
 }
 
-/* background-color: #8c0d17;
-  border-radius: 0.3em;
-  padding: 0.1em 1em .1em;
-  font-size: 1.3em;
-  border: none;
-  color: white; */
-
-.related {
+.reviews-section h1,
+.related-section h1 {
   color: white;
   font-family: Lustria;
   margin-bottom: 10px;
 }
+
 .all-reviews {
   background-color: #0d0d0d;
   width: 100%;
   padding: 50px;
   color: white;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 .all-wines-detail {
   display: flex;
@@ -115,10 +110,12 @@
   flex-flow: row wrap;
 }
 
-.below-line {
+.reviews-section {
   background-color: #400101;
   width: 100%;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1024px) {
@@ -126,13 +123,14 @@
     width: 80%;
   }
 
-  .detail {
+  .wine-detail-text {
     width: 80%;
     align-items: center;
     text-align: center;
+    padding: 20px 0;
   }
 
-  .below-line {
+  .reviews-section {
     background-color: #400101;
     width: 100%;
     align-items: center;
@@ -157,14 +155,14 @@
     width: 80%;
   }
 
-  .detail {
+  .wine-detail-text {
     width: 80%;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
 
-  .below-line {
+  .reviews-section {
     background-color: #400101;
     width: 90%;
     align-items: center;

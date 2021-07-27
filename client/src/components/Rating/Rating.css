@@ -1,3 +1,6 @@
 .rating {
   color: #ab8f7f;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
 }
