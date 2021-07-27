@@ -1,4 +1,4 @@
-.navbar {
+header {
   display: flex;
   width: 100vw;
   height: 5rem;
@@ -45,12 +45,46 @@
   color: #ab8f7f;
 }
 
+.fa-bars, .fa-times {
+  color: white;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #ab8f7f !important;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .fa-bars {
+    display: none;
+  }
+
+  .mobile-navbar-right-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-right-container {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 757px) {
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
   }
   .navbar-left-container {
     padding-left: 0;
@@ -58,16 +92,35 @@
   .navbar-right-container {
     padding-right: 0;
   }
+
+  .mobile-navbar-right-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+   }
+
+
+   
 }
 
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 500px) {
   .navbar {
-    height: 8rem;
-  }
+    /* height: 8rem; */
+    display: none;
+   }
+
   .navbar-right-container {
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding-right: 0;
     width: 100%;
+    display: none;
   }
 }
-

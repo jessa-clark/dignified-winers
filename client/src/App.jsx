@@ -12,6 +12,7 @@ import WineAdd from "./screens/WineAdd/WineAdd";
 import WineDetail from "./screens/WineDetail/WineDetail";
 import WineEdit from "./screens/WineEdit/WineEdit";
 import "./App.css";
+import FeaturedWines from "./screens/FeaturedWines/FeaturedWines";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -53,6 +54,10 @@ const App = () => {
 
         <Route exact path="/add-wine">
           <WineAdd user={user} />
+        </Route>
+
+        <Route exact path="/wines/featured">
+          <FeaturedWines user={user} />
         </Route>
 
         <Route exact path="/wines/:id">
