@@ -9,7 +9,7 @@ const FeaturedCard = (props) => {
     <article className="featured-card">
       <img src={imgURL} className="featured-card-image"/>
       <div className="featured-card-text">
-      <h3>{name}</h3>
+      <h3>{`#${props.rank} ${name}`}</h3>
       <Rating className="review-rating" rating={rating} />
       <p>{description}</p>
       </div>

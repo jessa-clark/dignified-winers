@@ -1,0 +1,8 @@
+.featured-wines {
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  width: 60%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
