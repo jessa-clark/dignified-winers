@@ -1,18 +1,33 @@
 import { useState, useEffect } from "react";
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 import "./WineDetail.css";
 import Layout from "../../components/Layout/Layout";
-import { getOneWine, deleteWine, getWines } from "../../services/wines";
+import {
+  getOneWine,
+  deleteWine,
+  getWines,
+  editWine,
+} from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import { verify } from "../../services/users";
 import { useParams, Link, useHistory } from "react-router-dom";
 import Rating from "../../components/Rating/Rating";
 import Review from "../../components/Review/Review";
+import ReviewForm from "../../components/Review/ReviewForm";
 
 const WineDetail = (props) => {
+  const { user } = props;
   const [wine, setWine] = useState(null);
   const [wines, setWines] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [userExists, setUserExists] = useState(null);
+  const [showForm, setShowForm] = useState(false);
+  const [toggleFetch, setToggleFetch] = useState(false);
+  const [review, setReview] = useState({
+    author: user?.username,
+    rating: 0,
+    description: "",
+  });
   const history = useHistory();
   const { id } = useParams();
 
@@ -23,7 +38,7 @@ const WineDetail = (props) => {
       setLoaded(true);
     };
     fetchWine();
-  }, [id]);
+  }, [id, toggleFetch]);
 
   useEffect(() => {
     const fetchWines = async () => {
@@ -42,8 +57,32 @@ const WineDetail = (props) => {
   }, []);
 
   if (!isLoaded) {
-    return <h1>Loading ...</h1>;
+    return <h1>Loading...</h1>;
   }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReview({
+      ...review,
+      [name]: value,
+    });
+  };
+
+  const submitReview = (e) => {
+    e.preventDefault();
+    const newReviews = [...wine.reviews, review];
+    const newWine = {
+      ...wine,
+      reviews: newReviews,
+    };
+    const addReview = async () => {
+      const updated = await editWine(id, newWine);
+      if (updated) {
+        setToggleFetch(!toggleFetch);
+      }
+    };
+    addReview();
+  };
 
   const handleSubmit = () => {
     const deleteOneWine = async () => {
@@ -75,27 +114,51 @@ const WineDetail = (props) => {
           </div>
           <div className="wine-detail-description">{wine.description}</div>
           <div className="wine-detail-button-container">
-          {userExists ? (
-          <>
-            <Link className="wine-detail-edit-button" to={`/wines/edit/${id}`}>
-              Edit
-            </Link>
-            <Link
-              className="wine-detail-delete-button"
-              to="/wines"
-              onClick={handleSubmit}
-            >
-              Delete
-            </Link>
-            </>
-        ) : (
-          <Link className="sign-up-to-wine-button" to="/sign-up">Sign up to Wine</Link>
-        )}
+            {userExists ? (
+              <>
+                <Link
+                  className="wine-detail-edit-button"
+                  to={`/wines/edit/${id}`}
+                >
+                  Edit
+                </Link>
+                <Link
+                  className="wine-detail-delete-button"
+                  to="/wines"
+                  onClick={handleSubmit}
+                >
+                  Delete
+                </Link>
+              </>
+            ) : (
+              <Link className="sign-up-to-wine-button" to="/sign-up">
+                Sign up to Wine
+              </Link>
+            )}
           </div>
         </div>
       </section>
       <section className="reviews-section">
-        <h1 className="related">Reviews</h1>
+        <h1 className="review-header">
+          Reviews {}
+          {showForm ? (
+            <AiOutlineMinusCircle
+              onClick={() => setShowForm((curr) => !curr)}
+            />
+          ) : (
+            <AiOutlinePlusCircle onClick={() => setShowForm((curr) => !curr)} />
+          )}
+        </h1>
+        {showForm ? (
+          <ReviewForm
+            handleChange={handleChange}
+            review={review}
+            submitReview={submitReview}
+          />
+        ) : (
+          <></>
+        )}
+
         <div className="all-reviews">
           {wine.reviews.map((review) => (
             <Review key={review._id} review={review} />

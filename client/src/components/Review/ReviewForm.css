@@ -1,0 +1,14 @@
+.review-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 300px;
+}
+.review-form * {
+  margin-bottom: 10px;
+}
+.review-form textarea {
+  resize: none;
+  height: 10rem;
+  overflow: scroll;
+}
