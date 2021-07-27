@@ -1,8 +1,8 @@
 .rating {
   color: #ab8f7f;
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 5px;
+  align-items: center;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1024px) {
