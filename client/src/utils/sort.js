@@ -11,7 +11,7 @@ const dateAdded = (a, b) => {
 };
 
 const rating = (a, b) => {
-  return a.rating - b.rating;
+  return b.rating - a.rating;
 };
 
 export const sort = (arr, type) => {

@@ -1,0 +1,19 @@
+.featured-card {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid white;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: #400101;
+  padding: 50px 0;
+}
+.featured-card-image {
+  width: 40%;
+}
+.featured-card-text {
+  display: flex;
+  flex-direction: column;
+  border-width: 0.1em;
+  width: 40%;
+  color: white;
+}
