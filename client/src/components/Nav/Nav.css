@@ -1,4 +1,3 @@
-
 header {
   display: flex;
   width: 100vw;
@@ -40,20 +39,29 @@ header {
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.5 ease-out;
-  
 }
-
 
 .navbar-right-container > *:hover {
   color: #ab8f7f;
 }
- 
-.fa-bars {
+
+.fa-bars, .fa-times {
   color: white;
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 5;
 }
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #ab8f7f !important;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .fa-bars {
@@ -66,20 +74,17 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-  
-
   .navbar-right-container {
     display: none;
   }
 }
-
-
 
 @media screen and (max-width: 757px) {
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
   }
   .navbar-left-container {
     padding-left: 0;
@@ -88,44 +93,34 @@ header {
     padding-right: 0;
   }
 
-  
+  .mobile-navbar-right-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+   }
+
+
+   
 }
 
-
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 500px) {
   .navbar {
     /* height: 8rem; */
     display: none;
-    visibility: hidden;
-  }
-  
+   }
+
   .navbar-right-container {
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding-right: 0;
     width: 100%;
     display: none;
-   } 
-  
-  
-  .mobile-navbar-right-container {
-    padding: 0.5rem;
-    color: #e5e5e5;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: color 0.5 ease-out;
-    top: 0;
-    position: fixed;
-    opacity: 0.9;
-  
   }
-  
-  .fa-bars {
-    color: white;
-    top: 0;
-    left: 0;
-  } 
-  
-  
-  
 }
-
