@@ -1,5 +1,7 @@
+import React from 'react'
 import Rating from "../Rating/Rating";
 import "./Review.css";
+
 const Review = (props) => {
   const { author, rating, description } = props.review;
   return (
