@@ -139,8 +139,8 @@ const WineDetail = (props) => {
         </div>
       </section>
       <section className="reviews-section">
-        <h1 className="review-header">
-          Reviews {}
+        <div className="review-header">
+          <h1>Reviews</h1> {}
           {showForm ? (
             <AiOutlineMinusCircle
               onClick={() => setShowForm((curr) => !curr)}
@@ -148,7 +148,8 @@ const WineDetail = (props) => {
           ) : (
             <AiOutlinePlusCircle onClick={() => setShowForm((curr) => !curr)} />
           )}
-        </h1>
+        </div>
+        <h6>Click the + icon above to add your own review!</h6>
         {showForm ? (
           <ReviewForm
             handleChange={handleChange}
