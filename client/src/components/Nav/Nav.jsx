@@ -27,6 +27,7 @@ const Nav = () => {
       </Link>
       <div className="navbar-right-container">
         <Link to="/">Home</Link>
+        <Link to="/wines/featured">Featured</Link>
         <Link to="/wines">Browse Wines</Link>
         {userExists ? (
           <>
