@@ -1,3 +1,5 @@
+import React from 'react'
+import './ReviewForm.css'
 
 const ReviewForm = ({author, rating, description, onChange, onSubmit}) => {
   return (
