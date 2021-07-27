@@ -54,6 +54,7 @@ const WineAdd = (props) => {
       </div>
       <div className="add-form-container">
         <div className="add-image-container">
+        <p className="image-preview">image preview</p>
           <img className="wine-image" src={wine.imgURL} alt={wine.name} />
         </div>
         <form className="wine-description-container" onSubmit={handleSubmit}>
