@@ -1,4 +1,5 @@
-.navbar {
+
+header {
   display: flex;
   width: 100vw;
   height: 5rem;
@@ -39,11 +40,39 @@
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.5 ease-out;
+  
 }
+
 
 .navbar-right-container > *:hover {
   color: #ab8f7f;
 }
+ 
+.fa-bars {
+  color: white;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .fa-bars {
+    display: none;
+  }
+
+  .mobile-navbar-right-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  
+
+  .navbar-right-container {
+    display: none;
+  }
+}
+
 
 
 @media screen and (max-width: 757px) {
@@ -58,16 +87,45 @@
   .navbar-right-container {
     padding-right: 0;
   }
+
+  
 }
+
 
 @media screen and (max-width: 500px ) {
   .navbar {
-    height: 8rem;
+    /* height: 8rem; */
+    display: none;
+    visibility: hidden;
   }
+  
   .navbar-right-container {
     justify-content:space-evenly;
     padding-right: 0;
     width: 100%;
+    display: none;
+   } 
+  
+  
+  .mobile-navbar-right-container {
+    padding: 0.5rem;
+    color: #e5e5e5;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.5 ease-out;
+    top: 0;
+    position: fixed;
+    opacity: 0.9;
+  
   }
+  
+  .fa-bars {
+    color: white;
+    top: 0;
+    left: 0;
+  } 
+  
+  
+  
 }
 
