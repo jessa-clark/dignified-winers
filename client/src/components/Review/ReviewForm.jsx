@@ -20,7 +20,7 @@ const ReviewForm = ({ review, handleChange, submitReview }) => {
         required
         onChange={handleChange}
       />
-      <button type="submit" className="add-review-submit">
+      <button type="submit" className="add-review-button">
         Submit
       </button>
     </form>
