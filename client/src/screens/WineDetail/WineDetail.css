@@ -62,7 +62,8 @@
 }
 
 .wine-detail-edit-button,
-.wine-detail-delete-button {
+.wine-detail-delete-button,
+.sign-up-to-wine-button {
   background-color: #8c0d17;
   border: none;
   border-radius: 0.3em;
@@ -82,12 +83,17 @@
   color: rgba(255, 255, 255, 0.756);
 }
 
+.wine-detail-sign-up-to-wine-button:hover {
+  color: #ab8f7f;
+}
+
 .reviews-section h1,
 .related-section h1 {
   color: white;
   font-family: Lustria;
   margin-bottom: 10px;
 }
+
 .all-reviews {
   background-color: #0d0d0d;
   width: 100%;

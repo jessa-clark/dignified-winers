@@ -3,6 +3,7 @@ import "./WineDetail.css";
 import Layout from "../../components/Layout/Layout";
 import { getOneWine, deleteWine, getWines } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
+import { verify } from "../../services/users";
 import { useParams, Link, useHistory } from "react-router-dom";
 import Rating from "../../components/Rating/Rating";
 import Review from "../../components/Review/Review";
@@ -11,6 +12,7 @@ const WineDetail = (props) => {
   const [wine, setWine] = useState(null);
   const [wines, setWines] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [userExists, setUserExists] = useState(null);
   const history = useHistory();
   const { id } = useParams();
 
@@ -29,6 +31,14 @@ const WineDetail = (props) => {
       setWines(results);
     };
     fetchWines();
+  }, []);
+
+  useEffect(() => {
+    const checkSigned = async () => {
+      const valid = await verify();
+      setUserExists(valid ? true : false);
+    };
+    checkSigned();
   }, []);
 
   if (!isLoaded) {
@@ -65,6 +75,8 @@ const WineDetail = (props) => {
           </div>
           <div className="wine-detail-description">{wine.description}</div>
           <div className="wine-detail-button-container">
+          {userExists ? (
+          <>
             <Link className="wine-detail-edit-button" to={`/wines/edit/${id}`}>
               Edit
             </Link>
@@ -75,6 +87,10 @@ const WineDetail = (props) => {
             >
               Delete
             </Link>
+            </>
+        ) : (
+          <Link className="sign-up-to-wine-button" to="/sign-up">Sign up to Wine</Link>
+        )}
           </div>
         </div>
       </section>
