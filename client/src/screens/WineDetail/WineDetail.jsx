@@ -110,7 +110,7 @@ const WineDetail = (props) => {
             • {wine.year}
           </div>
           <div className="wine-detail-rating">
-            <Rating rating={wine.rating} />
+            <Rating rating={wine.rating} /> &nbsp; {`${wine.rating} out of 5`}
           </div>
           <div className="wine-detail-description">{wine.description}</div>
           <div className="wine-detail-button-container">

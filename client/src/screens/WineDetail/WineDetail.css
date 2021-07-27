@@ -8,56 +8,44 @@
   align-items: center;
   background-color: #400101;
   padding: 50px 0;
-}
-.wine-detail-image img {
   width: 100%;
 }
+
 .wine-detail-text {
   display: flex;
   flex-direction: column;
   border-width: 0.1em;
   width: 40%;
+  color: white;
 }
 
 .wine-detail-image {
   width: 40%;
 }
 
+.wine-detail-image img {
+  width: 100%;
+}
+
 .wine-detail-name {
   font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2em;
-  line-height: 1em;
-  color: white;
-  margin: 10px 0;
+  font-size: 2rem;
 }
 
 .wine-detail-vineyard {
-  font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3em;
-  color: white;
+  font-size: 1.1rem;
   margin: 5px 0;
 }
 
 .wine-detail-rating {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3em;
-  flex-wrap: nowrap;
-  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .wine-detail-description {
-  font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1em;
   line-height: 1.2em;
   flex-wrap: nowrap;
-  color: white;
   margin: 10px 0 20px;
 }
 
@@ -76,16 +64,22 @@
   justify-content: space-between;
 }
 
-.wine-detail-delete-button:hover {
-  color: rgba(255, 255, 255, 0.756);
-}
-
-.wine-detail-edit-button:hover {
-  color: rgba(255, 255, 255, 0.756);
-}
-
+.wine-detail-delete-button:hover,
+.wine-detail-edit-button:hover,
 .wine-detail-sign-up-to-wine-button:hover {
   color: #ab8f7f;
+}
+
+.reviews-section,
+.related-section {
+  flex-direction: column;
+}
+
+.review-header {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
 }
 
 .review-header h1,
@@ -95,19 +89,21 @@
   color: white;
 }
 
-.review-header {
-  color: white;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
+.add-review-button {
+  width: 100%;
 }
+
 .reviews-section h6 {
   color: white;
 }
 
+.related-section {
+  border-bottom: none;
+}
+
 .all-reviews {
   background-color: #0d0d0d;
-  width: 100%;
+  width: 90%;
   padding: 50px;
   color: white;
   display: flex;
@@ -121,16 +117,6 @@
   flex-flow: row wrap;
 }
 
-.reviews-section {
-  background-color: #400101;
-  width: 100%;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-}
-.add-review-button {
-  width: 100%;
-}
 @media screen and (max-width: 1024px) {
   .wine-detail-image {
     width: 80%;
