@@ -9,6 +9,10 @@
   background-color: #400101;
   padding: 50px 0;
 }
+.related-section {
+  width: 100vw;
+  flex-direction: column;
+}
 .wine-detail-image img {
   width: 100%;
 }
