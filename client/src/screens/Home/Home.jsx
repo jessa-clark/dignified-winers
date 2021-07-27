@@ -34,7 +34,7 @@ const Home = () => {
     };
     fetchWines();
 
-    // making window size a state for conditional rendering of carousel items
+    //  making window size a state for conditional rendering of carousel items
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 
@@ -94,7 +94,7 @@ const Home = () => {
             From the taste to the group, only wines worth your time end up on
             our Featured Wines
           </p>
-          <Carousel>
+          <Carousel className="caro">
             {width > ipad
               ? wineList.map((list, index) => (
                   <Carousel.Item key={index}>
