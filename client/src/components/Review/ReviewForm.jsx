@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-import './ReviewForm.css'
-
-const ReviewForm = ({author, rating, description, onChange, onSubmit}) => {
-=======
 import "./ReviewForm.css";
 const ReviewForm = ({ review, handleChange, submitReview }) => {
->>>>>>> 55e0369917d56c08b970b308eccb63143d7464cd
   return (
     <form className="review-form" onSubmit={submitReview}>
       <input
