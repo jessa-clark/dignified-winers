@@ -40,6 +40,7 @@ const Home = () => {
 
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
+  console.log(singleWine);
 
   const takeToWines = () => {
     setTimeout(() => {
@@ -93,7 +94,7 @@ const Home = () => {
             From the taste to the group, only wines worth your time end up on
             our Featured Wines
           </p>
-          <Carousel>
+          <Carousel className="caro">
             {width > ipad
               ? wineList.map((list, index) => (
                   <Carousel.Item key={index}>
