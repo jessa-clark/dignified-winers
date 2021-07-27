@@ -171,13 +171,12 @@ margin-bottom: 4rem;
  height: 5rem; 
  margin: auto;
 } */
-
 .landing-container h2 {
 	transform: scale(2.4);
 	animation: scaleDownHeadingOnLoad 1s ease forwards;
 }
 
-.landing-container button{
+.landing-container button, .landing-section button{
 	opacity: 0;
 	transform: translateY(60px);
 	animation: 1s slideUpSubheadingOnLoad 1s ease forwards;
@@ -204,6 +203,19 @@ very sexy addition to the app, thank you conrad */
 		opacity: 1;
 		transform: translateY(0px);
 	}
+}
+@media screen and (min-width: 1025px) {
+  .landing-section {
+    transform: scale(2.4);
+    transform: translateY(60px);
+    animation: scaleDownHeadingOnLoad 1s ease forwards;
+  }
+  .who-content-title {
+    margin-bottom: 4rem;
+  }
+  .who-content-text {
+    line-height: 2;
+  }
 }
 
 @media screen and (max-width: 1025px) {
