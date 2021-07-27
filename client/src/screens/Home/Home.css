@@ -172,6 +172,40 @@ margin-bottom: 4rem;
  margin: auto;
 } */
 
+.landing-container h2 {
+	transform: scale(2.4);
+	animation: scaleDownHeadingOnLoad 1s ease forwards;
+}
+
+.landing-container button{
+	opacity: 0;
+	transform: translateY(60px);
+	animation: 1s slideUpSubheadingOnLoad 1s ease forwards;
+}
+
+
+/* the following snippet is a courtesy of Conrad Trost (https://trost.dev/).
+very sexy addition to the app, thank you conrad */
+@keyframes scaleDownHeadingOnLoad {
+	0% {
+		transform: scale(2.4);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes slideUpSubheadingOnLoad {
+	0% {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
 @media screen and (max-width: 1025px) {
   .landing-section {
     background: url("./HomeBanner.jpeg") no-repeat center;
