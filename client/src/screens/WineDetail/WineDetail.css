@@ -101,7 +101,13 @@
   font-family: Lustria;
   margin-bottom: 10px;
 }
-
+.all-reviews {
+  background-color: #0d0d0d;
+  width: 100%;
+  padding: 50px;
+  color: white;
+  display: flex;
+}
 .all-wines-detail {
   display: flex;
   background-color: #0d0d0d;
