@@ -104,7 +104,7 @@ export const getUserWines = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     const userWines = await Wine.find({ userId: user._id });
-    return res.json(userWines);
+    res.json(userWines);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -114,11 +114,12 @@ export const getUserWine = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     const userWine = await Wine.findById(req.params.wineId).populate("userId");
-    if (userWine.userId.equals(user._id)) {
-      return res.json(userWine);
+    if (userWine.userId._id.equals(user._id)) {
+      res.json(userWine);
     }
     throw new Error(`Wine ${userWine._id} does not belong to user ${user._id}`);
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ error: error.message });
   }
 };
@@ -159,7 +160,7 @@ export const deleteUserWine = async (req, res) => {
     if (await User.findById(id)) {
       const deleted = await Wine.findByIdAndDelete(wineId);
       if (deleted) {
-        return res.status(200).send("Product deleted!");
+        res.status(200).send("Product deleted!");
       }
       throw new Error(`Wine ${wineId} not found!`);
     }

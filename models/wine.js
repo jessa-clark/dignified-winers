@@ -21,7 +21,7 @@ const Wine = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
-Wine.virtual("rating").get(() => {
+Wine.virtual("rating").get(function () {
   //taking average of reviews
   return (
     this.reviews.reduce((total, review) => total + review.rating, 0) /
