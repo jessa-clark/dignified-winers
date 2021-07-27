@@ -64,7 +64,7 @@ const Nav = () => {
       <nav className="navbar">
         <div className="navbar-right-container">
           <Link to="/">Home</Link>
-          <Link to="/wines/featured">Featured</Link>
+          <Link to="/wines/featured" className="nav-link">Featured</Link>
           <Link to="/wines">Browse Wines</Link>
           { userExists ? (
             <>
@@ -79,7 +79,7 @@ const Nav = () => {
 
         {showMenu ?  <div className="mobile-navbar-right-container">
            <Link to="/" className="nav-link">Home</Link>
-           <Link to="/wines/featured">Featured</Link>
+           <Link to="/wines/featured" className="nav-link">Featured</Link>
           <Link to="/wines" className="nav-link">Browse Wines</Link> 
           {userExists ? (
             <>
