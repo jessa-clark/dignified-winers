@@ -23,7 +23,7 @@ const Search = (props) => {
     <div className="search-area">
       <input
         type="text"
-        placeholder="Search wines..."
+        placeholder="Search wines by name..."
         value={input}
         onChange={handleChange}
       />
