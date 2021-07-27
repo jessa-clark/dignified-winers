@@ -8,6 +8,9 @@
   background-size: cover;
   /* background url will have to change based on responsiveness */
 }
+.landing-container {
+   width: 100vw;
+}
 
 .landing-button {
   position: absolute;
