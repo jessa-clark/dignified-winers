@@ -1,34 +1,30 @@
-
-const ReviewForm = ({author, rating, description, onChange, onSubmit}) => {
+import "./ReviewForm.css";
+const ReviewForm = ({ review, handleChange, submitReview }) => {
   return (
-    <form onSubmit={(e) => onSubmit(e)}>
-      <input className="add-review-author"
-      placeholder="Author"
-      value={author}
-      name="author"
-      required
-      onChange={(e) => onChange(e)}
+    <form className="review-form" onSubmit={submitReview}>
+      <input
+        type="number"
+        className="add-review-rating"
+        min="0"
+        max="5"
+        value={review.rating}
+        name="rating"
+        required
+        onChange={handleChange}
       />
-      <input className="add-review-rating"
-      placeholder="Rating (1-5)"
-      value={rating}
-      name="rating"
-      required
-      onChange={(e) => onChange(e)} />
-      <textarea 
-      className="add-review-description"
-      rows={10}
-      placeholder="You can w(h)ine in here..."
-      value={description}
-      name="description"
-      required
-      onChange={(e)=>onChange(e)}
+      <textarea
+        className="add-review-description"
+        placeholder="You can w(h)ine in here..."
+        value={review.description}
+        name="description"
+        required
+        onChange={handleChange}
       />
       <button type="submit" className="add-review-submit">
         Submit
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default ReviewForm
+export default ReviewForm;
