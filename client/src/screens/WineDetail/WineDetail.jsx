@@ -47,11 +47,11 @@ const WineDetail = (props) => {
 
   return (
     <Layout user={props.user}>
-      <div className="wine-detail">
+      <section className="detail-section">
         <div className="wine-detail-image">
           <img src={wine.imgURL} alt={wine.name} />
         </div>
-        <div className="detail">
+        <div className="wine-detail-text">
           <div className="wine-detail-name">{wine.name}</div>
           <div className="wine-detail-vineyard">
             {" "}
@@ -60,7 +60,7 @@ const WineDetail = (props) => {
               : `${wine.vineyard} Vineyard`}{" "}
             • {wine.year}
           </div>
-          <div className="wine-detail-year">
+          <div className="wine-detail-rating">
             <Rating rating={wine.rating} />
           </div>
           <div className="wine-detail-description">{wine.description}</div>
@@ -77,16 +77,16 @@ const WineDetail = (props) => {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="below-line">
+      </section>
+      <section className="reviews-section">
         <h1 className="related">Reviews</h1>
         <div className="all-reviews">
           {wine.reviews.map((review) => (
             <Review key={review._id} review={review} />
           ))}
         </div>
-      </div>
-      <div className="below-line">
+      </section>
+      <section className="related-section">
         <h1 className="related">Related Wines</h1>
         <div className="all-wines-detail">
           {wines?.length ? (
@@ -97,7 +97,7 @@ const WineDetail = (props) => {
             <h2>Loading...</h2>
           )}
         </div>
-      </div>
+      </section>
     </Layout>
   );
 };
