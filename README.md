@@ -35,6 +35,7 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 - Top 5 "featured" wines list
 - add review functionality
 - add hamburger menu for mobile
+- animations to home page
 
 ## Project Schedule
 
