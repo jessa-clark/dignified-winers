@@ -6,7 +6,6 @@ import { addWine } from "../../services/wines";
 import "./WineAdd.css";
 
 const WineAdd = (props) => {
-  // console.log(props);
   const [wine, setWine] = useState({
     name: "",
     vineyard: "",

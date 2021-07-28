@@ -56,9 +56,6 @@ const WineDetail = (props) => {
     return <h1>Loading...</h1>;
   }
 
-
-
-
   const handleSubmit = () => {
     const deleteOneWine = async () => {
       await deleteWine(id);

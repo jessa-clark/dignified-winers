@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { verify } from "../../services/users";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
- 
-// images
-
 import "./Nav.css";
 
 const Nav = () => {

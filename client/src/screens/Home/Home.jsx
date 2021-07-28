@@ -75,7 +75,6 @@ const Home = () => {
           <div
             className="who-image"
             data-aos={width > ipad ? "fade-right" : "fade-down"}
-            // data-aos-delay="50"
             data-aos-duration="600"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
@@ -86,7 +85,6 @@ const Home = () => {
           <div
             className="who-content"
             data-aos={width > ipad ? "fade-left" : "fade-up"}
-            // data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"

@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 import "./Wine.css";
 
 const Wine = (props) => {
-  // console.log(props.wine);
+  const { _id, imgURL, name, vineyard, year} = props.wine;
   return (
-    <Link className="wine" to={`/wines/${props.wine._id}`}>
+    <Link className="wine" to={`/wines/${_id}`}>
       <article>
         <div className="wine-header">
-          <h3>{props.wine.name}</h3>
+          <h3>{name}</h3>
         </div>
         <div className="wine-body-image">
-          <img src={props.wine.imgURL} alt={props.wine.name} />
+          <img src={imgURL} alt={name} />
         </div>
         <div className="wine-footer">
-          <p>{props.wine.vineyard}</p>
-          <h5>{props.wine.year}</h5>
+          <p>{vineyard}</p>
+          <h5>{year}</h5>
         </div>
       </article>
     </Link>
