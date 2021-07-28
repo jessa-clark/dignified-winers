@@ -111,15 +111,3 @@ header {
    
 }
 
-@media screen and (max-width: 500px) {
-  .navbar {
-    display: none;
-   }
-
-  .navbar-right-container {
-    justify-content: space-evenly;
-    padding-right: 0;
-    width: 100%;
-    display: none;
-  }
-}
