@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 import "./Review.css";
 import { editWine } from "../../services/wines";
 
-const Review = (props) => {
-  const { author, rating, description, _id } = props.review;
-  const { wine, setToggleFetch, user } = props
 
+const Review = (props) => {
+  const { wine, setToggleFetch, user } = props;
+
+  const {_id, author, rating, description} = props.review;
 
   const { id } = useParams();
 

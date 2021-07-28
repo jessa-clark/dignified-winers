@@ -6,7 +6,6 @@ import {
   getOneWine,
   deleteWine,
   getWines,
-  editWine,
 } from "../../services/wines";
 import Wine from "../../components/Wine/Wine";
 import { verify } from "../../services/users";
@@ -23,11 +22,6 @@ const WineDetail = (props) => {
   const [userExists, setUserExists] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [toggleFetch, setToggleFetch] = useState(false);
-  const [review, setReview] = useState({
-    author: user?.username,
-    rating: 0,
-    description: "",
-  });
   const history = useHistory();
   const { id } = useParams();
 
@@ -63,29 +57,7 @@ const WineDetail = (props) => {
   }
 
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setReview({
-      ...review,
-      [name]: value,
-    });
-  };
 
-  const submitReview = (e) => {
-    e.preventDefault();
-    const newReviews = [...wine.reviews, review];
-    const newWine = {
-      ...wine,
-      reviews: newReviews,
-    };
-    const addReview = async () => {
-      const updated = await editWine(id, newWine);
-      if (updated) {
-        setToggleFetch(!toggleFetch);
-      }
-    };
-    addReview();
-  };
 
   const handleSubmit = () => {
     const deleteOneWine = async () => {
@@ -155,9 +127,11 @@ const WineDetail = (props) => {
         <h6>Click the + icon above to add your own review!</h6>
         {showForm ? (
           <ReviewForm
-            handleChange={handleChange}
-            review={review}
-            submitReview={submitReview}
+            user={user}
+            wine={wine}
+            id={id}
+            setShowForm={setShowForm}
+            setToggleFetch={setToggleFetch}
           />
         ) : (
           <></>
@@ -174,7 +148,7 @@ const WineDetail = (props) => {
         <div className="all-wines-detail">
           {wines?.length ? (
             [...wines]
-              .splice(0, 4)
+              .splice(wines.findIndex((wine) => wine._id === id)+ 1, 4)
               .map((wine) => <Wine key={wine._id} wine={wine} />)
           ) : (
             <h2>Loading...</h2>
