@@ -137,7 +137,14 @@ const Home = () => {
         </div>
       </section>
       <section className="community-section">
-        <div className="community-content">
+        <div className="community-content"  data-aos="fade-in"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
           <h2 className="community-title">Wine With Us</h2>
           <p className="community-text">
             Wine is its most beautiful, when its shared among friends. Whether
