@@ -7,15 +7,16 @@
   line-height: 6vh;
 }
 .add-form-container {
+  border: solid .3em white;
   padding: 0;
   margin-bottom: 5vh;
   display: grid;
   background-color: #400101;
-  color: white;
-  width: 65.6vw;
+  color: black;
+  width: 55vw;
   height: 132.31vh;
   justify-content: center;
-  column-gap: 30vw;
+  column-gap: 3vw;
   grid-template-areas:
     "A B"
     "A B"
@@ -24,7 +25,10 @@
 
 .add-image-container {
   grid-area: A;
+  height: 500px;
+  width: 500px;
   position: relative;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -38,9 +42,8 @@
 .wine-image {
   grid-area: A;
   position: absolute;
-  width: auto;
+  width: 100%;
   max-width: 26.042vw;
-  height: auto;
   max-height: 73.52941176470588vh;
   margin-top: 1vh;
   overflow: hidden;
@@ -53,6 +56,7 @@
   grid-area: C;
   margin-bottom: 10vh;
   font-family: inherit;
+  overflow-wrap: break-word;
 }
 .wine-description-label {
   font-size: 1.25rem;
@@ -60,8 +64,8 @@
 }
 
 .textarea-description {
-  width: 62vw;
-  height: 45vh;
+  width: 50vw;
+  height: 40vh;
   margin-bottom: 3vh;
   overflow-wrap: break-word;
   resize: none;
@@ -85,13 +89,16 @@
 }
 
 .add-form {
+  border: solid .3em white;
+  background-color: #cab9af;
   grid-area: B;
   display: flex;
   flex-direction: column;
   row-gap: 1vh;
-  margin-top: 10.8vh;
+  margin-top:5vh;
   margin-bottom: 0;
-  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .wine-name-label {
@@ -99,7 +106,7 @@
 }
 
 .input-name {
-  width: 26.5vw;
+  width: 20vw;
   height: 5.47vh;
   font-size: 1.25rem;
   font-family: inherit;
@@ -110,7 +117,7 @@
 }
 
 .input-vineyard {
-  width: 26.5vw;
+  width: 20vw;
   height: 5.47vh;
   font-size: 1.25rem;
   font-family: inherit;
@@ -121,7 +128,7 @@
 }
 
 .input-year {
-  width: 26.5vw;
+  width: 20vw;
   height: 5.47vh;
   font-size: 1.25rem;
   font-family: inherit;
@@ -132,7 +139,7 @@
 }
 
 .input-image-link {
-  width: 26.5vw;
+  width: 20vw;
   height: 5.47vh;
   font-size: 1.25rem;
   font-family: inherit;
@@ -143,7 +150,7 @@
 }
 
 .dropdown-type {
-  width: 26.5vw;
+  width: 20vw;
   height: 5.47vh;
 }
 
