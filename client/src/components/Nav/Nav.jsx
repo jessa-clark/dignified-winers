@@ -9,7 +9,6 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Nav.css";
 
 const Nav = () => {
-  const [visible, setVisible] = useState(true);
   const [userExists, setUserExists] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -26,14 +25,8 @@ const Nav = () => {
     const handleResize = () => {
       // if we're at desktop size
       if (window.innerWidth > 425) {
-        // make the nav visible
-        setVisible(true);
         // untoggle the hamburger menu 
         setShowMenu(false);
-      } else {
-      // otherwise...
-        // make the nav invisible
-        setVisible(false);
       }
     }
     // add an event listener to the resize event on the window

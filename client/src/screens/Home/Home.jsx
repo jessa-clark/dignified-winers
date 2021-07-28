@@ -42,7 +42,6 @@ const Home = () => {
 
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
-  console.log(singleWine);
 
   const takeToWines = () => {
     setTimeout(() => {

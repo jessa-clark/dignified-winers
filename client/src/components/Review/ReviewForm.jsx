@@ -1,5 +1,43 @@
+import { useState } from "react";
+import { editWine } from "../../services/wines"
 import "./ReviewForm.css";
-const ReviewForm = ({ review, handleChange, submitReview }) => {
+
+const ReviewForm = (props) => {
+  const {user, wine, setToggleFetch, id, setShowForm} = props;
+  const [review, setReview] = useState({
+    author: user?.username,
+    rating: 0,
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReview({
+      ...review,
+      [name]: value,
+    });
+  };
+
+  const submitReview = (e) => {
+    e.preventDefault();
+    const newReviews = [...wine.reviews, review];
+    const newWine = {
+      ...wine,
+      reviews: newReviews,
+    };
+    const addReview = async () => {
+      const updated = await editWine(id, newWine);
+      if (updated) {
+        setToggleFetch((curr) => !curr);
+        setReview({...review, rating: 0, description: ""})
+        setShowForm((curr) => !curr);
+      }
+    };
+    addReview();
+  };
+  
+  
+  
   return (
     <form className="review-form" onSubmit={submitReview}>
       <input
