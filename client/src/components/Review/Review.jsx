@@ -35,7 +35,7 @@ const Review = (props) => {
       <h3>{author}</h3>
       <Rating className="review-rating" rating={rating} />
       <p>{description}</p>
-      {user === author ? <button className="review-wine-delete-button" onClick={deleteReview}>
+      {user?.username === author ? <button className="review-wine-delete-button" onClick={deleteReview}>
         Delete
       </button> : <></>}
     </article>
