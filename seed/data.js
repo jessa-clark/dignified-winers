@@ -11,7 +11,6 @@ const insertData = async () => {
     username: "benathan",
     email: "beingnathan@aol.com",
     password_digest: await bcrypt.hash("newestpassword", 11),
-    wines: [],
   });
 
   await user1.save();
