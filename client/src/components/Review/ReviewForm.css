@@ -12,3 +12,7 @@
   height: 10rem;
   overflow: scroll;
 }
+
+.add-review-button:hover {
+  color: #ab8f7f;
+}

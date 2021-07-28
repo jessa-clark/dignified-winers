@@ -162,7 +162,7 @@ const WineDetail = (props) => {
 
         <div className="all-reviews">
           {wine.reviews.map((review) => (
-            <Review key={review._id} review={review} />
+            <Review key={review._id} review={review} wine={wine} setToggleFetch={setToggleFetch} user={user}/>
           ))}
         </div>
       </section>
