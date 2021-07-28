@@ -104,7 +104,7 @@
 .all-reviews {
   background-color: #0d0d0d;
   width: 90%;
-  padding: 50px;
+  padding: 10px 0;
   color: white;
   display: flex;
   flex-flow: row wrap;
@@ -142,6 +142,8 @@
     text-align: center;
   }
 
+
+
   .wine {
     width: 80%;
     justify-content: center;
@@ -163,14 +165,14 @@
 
   .reviews-section {
     background-color: #400101;
-    width: 90%;
+    width: 100%;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
 
   .all-wines-detail {
-    width: 100%;
+    width: 90%;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
