@@ -38,12 +38,3 @@ export const verify = async () => {
   }
   return false;
 };
-
-export const getUserWine = async (userId, wineId) => {
-  try {
-    const response = await api.get(`/users/${userId}/wines/${wineId}`)
-    return response.data
-  } catch (error) {
-    throw error
-  }
-};
