@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Carousel } from "react-bootstrap";
+import AOS from 'aos';
 
 import { getWines } from "../../services/wines";
-
 import Wine from "../../components/Wine/Wine";
 import Layout from "../../components/Layout/Layout";
-import { Carousel } from "react-bootstrap";
 
+import 'aos/dist/aos.css';
 import "./Home.css";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
   const [singleWine, setSingleWine] = useState([]);
   const [width, setWidth] = useState(window.innerWidth);
   const ipad = 1025;
+  AOS.init();
 
   useEffect(() => {
     const settingBrokenList = (arr, size) => {
@@ -34,13 +36,12 @@ const Home = () => {
     };
     fetchWines();
 
-    // making window size a state for conditional rendering of carousel items
+    //  making window size a state for conditional rendering of carousel items
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
-  console.log(singleWine);
 
   const takeToWines = () => {
     setTimeout(() => {
@@ -71,10 +72,26 @@ const Home = () => {
       </section>
       <section className="who-section">
         <div className="who-container">
-          <div className="who-image">
+          <div
+            className="who-image"
+            data-aos={width > ipad ? "fade-right" : "fade-down"}
+            // data-aos-delay="50"
+            data-aos-duration="600"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
             <img src="/img/TheWiners.jpeg" alt="4 wine glasses cheering" />
           </div>
-          <div className="who-content">
+          <div
+            className="who-content"
+            data-aos={width > ipad ? "fade-left" : "fade-up"}
+            // data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
             <h2 className="who-content-title">Who are the Winers?</h2>
             <p className="who-content-text">
               The Dignified Winers are an elite group of self-proclaimed
@@ -94,7 +111,7 @@ const Home = () => {
             From the taste to the group, only wines worth your time end up on
             our Featured Wines
           </p>
-          <Carousel>
+          <Carousel className="caro">
             {width > ipad
               ? wineList.map((list, index) => (
                   <Carousel.Item key={index}>
@@ -119,7 +136,14 @@ const Home = () => {
         </div>
       </section>
       <section className="community-section">
-        <div className="community-content">
+        <div className="community-content"  data-aos="fade-in"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
           <h2 className="community-title">Wine With Us</h2>
           <p className="community-text">
             Wine is its most beautiful, when its shared among friends. Whether

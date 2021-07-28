@@ -1,4 +1,6 @@
-.wine-detail {
+.detail-section,
+.reviews-section,
+.related-section {
   display: flex;
   justify-content: space-evenly;
   border-bottom: 1px solid white;
@@ -6,15 +8,15 @@
   align-items: center;
   background-color: #400101;
   padding: 50px 0;
+  width: 100%;
 }
 
-.detail {
+.wine-detail-text {
   display: flex;
   flex-direction: column;
   border-width: 0.1em;
-  padding-bottom: 1em;
-  margin-bottom: 5em;
   width: 40%;
+  color: white;
 }
 
 .wine-detail-image {
@@ -27,45 +29,30 @@
 
 .wine-detail-name {
   font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2em;
-  line-height: 1em;
-  color: white;
-  margin: 10px 0;
+  font-size: 2rem;
 }
 
 .wine-detail-vineyard {
-  font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3em;
-  color: white;
+  font-size: 1.1rem;
   margin: 5px 0;
 }
 
-.wine-detail-year {
-  font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3em;
-  flex-wrap: nowrap;
-  color: white;
+.wine-detail-rating {
+  display: flex;
+  align-items: center;
 }
 
 .wine-detail-description {
-  font-family: Lustria;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1em;
   line-height: 1.2em;
   flex-wrap: nowrap;
-  color: white;
   margin: 10px 0 20px;
 }
 
 .wine-detail-edit-button,
-.wine-detail-delete-button, .sign-up-to-wine-button {
+.wine-detail-delete-button,
+.sign-up-to-wine-button,
+.add-review-button {
   background-color: #8c0d17;
   border: none;
   border-radius: 0.3em;
@@ -77,31 +64,52 @@
   justify-content: space-between;
 }
 
-.wine-detail-delete-button:hover {
-  color: rgba(255, 255, 255, 0.756);
-}
-
-.wine-detail-edit-button:hover {
-  color: rgba(255, 255, 255, 0.756);
-}
-
+.wine-detail-delete-button:hover,
+.wine-detail-edit-button:hover,
 .sign-up-to-wine-button:hover {
-  color: rgba(255, 255, 255, 0.756);
+  color: #cab9af;
 }
 
-/* background-color: #8c0d17;
-  border-radius: 0.3em;
-  padding: 0.1em 1em .1em;
-  font-size: 1.3em;
-  border: none;
-  color: white; */
+.reviews-section,
+.related-section {
+  flex-direction: column;
+}
 
-.related {
+.review-header {
   color: white;
-  font-family: Lustria;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
 }
 
+.review-header h1,
+.related-section h1 {
+  font-family: Lustria;
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.add-review-button {
+  width: 100%;
+}
+
+.reviews-section h6 {
+  color: white;
+}
+
+.related-section {
+  border-bottom: none;
+}
+
+.all-reviews {
+  background-color: #0d0d0d;
+  width: 90%;
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
 .all-wines-detail {
   display: flex;
   background-color: #0d0d0d;
@@ -109,24 +117,19 @@
   flex-flow: row wrap;
 }
 
-.below-line {
-  background-color: #400101;
-  width: 100%;
-  padding: 50px;
-}
-
 @media screen and (max-width: 1024px) {
   .wine-detail-image {
     width: 80%;
   }
 
-  .detail {
+  .wine-detail-text {
     width: 80%;
     align-items: center;
     text-align: center;
+    padding: 20px 0;
   }
 
-  .below-line {
+  .reviews-section {
     background-color: #400101;
     width: 100%;
     align-items: center;
@@ -151,14 +154,14 @@
     width: 80%;
   }
 
-  .detail {
+  .wine-detail-text {
     width: 80%;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
 
-  .below-line {
+  .reviews-section {
     background-color: #400101;
     width: 90%;
     align-items: center;

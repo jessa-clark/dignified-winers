@@ -9,6 +9,7 @@ import Sort from "../../components/Sort/Sort";
 const AllWines = () => {
   const [wines, setWines] = useState([]);
   const [wineList, setWineList] = useState([]);
+  
   useEffect(() => {
     const getResults = async () => {
       const results = await getWines();
@@ -16,6 +17,7 @@ const AllWines = () => {
     };
     getResults();
   }, []);
+
   return (
     <Layout>
       <Search wines={wines} setWineList={setWineList} />

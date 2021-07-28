@@ -10,10 +10,20 @@ const dateAdded = (a, b) => {
   return a.createdAt - b.createdAt;
 };
 
+const rating = (a, b) => {
+  return b.rating - a.rating;
+};
+
 export const sort = (arr, type) => {
   const originalArr = [...arr];
   originalArr.sort(
-    type === "alphabetical" ? alphabetical : type === "year" ? year : dateAdded
+    type === "alphabetical"
+      ? alphabetical
+      : type === "year"
+      ? year
+      : type === "rating"
+      ? rating
+      : dateAdded
   );
   return type ? originalArr : arr;
 };

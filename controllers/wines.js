@@ -2,7 +2,7 @@ import Wine from "../models/wine.js";
 
 export const getWines = async (req, res) => {
   try {
-    const wines = await Wine.find();
+    const wines = await Wine.find().populate("userId");
     res.json(wines);
   } catch (error) {
     res.status(500).send(error.message);
@@ -11,7 +11,7 @@ export const getWines = async (req, res) => {
 
 export const getOneWine = async (req, res) => {
   try {
-    const wine = await Wine.findById(req.params.id);
+    const wine = await Wine.findById(req.params.id).populate("userId");
     res.json(wine);
   } catch (error) {
     res.status(500).send(error.message);
@@ -31,20 +31,15 @@ export const addWine = async (req, res) => {
 export const updateWine = async (req, res) => {
   try {
     const { id } = req.params;
-    await Wine.findByIdAndUpdate(
-      id,
-      req.body,
-      { new: true },
-      (err, wine) => {
-        if (err) {
-          res.status(500).json(err);
-        }
-        if (!wine) {
-          res.status(500).send("Wine not found!");
-        }
-        return res.status(200).json(wine);
+    await Wine.findByIdAndUpdate(id, req.body, { new: true }, (err, wine) => {
+      if (err) {
+        res.status(500).json(err);
       }
-    );
+      if (!wine) {
+        res.status(500).send("Wine not found!");
+      }
+      return res.status(200).json(wine);
+    });
   } catch (error) {
     res.status(500).send(error.message);
   }
