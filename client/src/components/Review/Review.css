@@ -5,6 +5,23 @@
   width: 45%;
 }
 
+.review-wine-delete-button {
+  background-color: #8c0d17;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.4em 1.5em;
+  font-size: 1.3em;
+  margin-right: 10px;
+  color: white;
+   
+}
+
+.review-wine-delete-button:hover {
+  color: #cab9af;
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .review {
     width: 90%;
