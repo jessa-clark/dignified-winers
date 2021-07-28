@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  /* padding-bottom: 2rem; */
+
 }
 .dev-logo-container > * {
   padding: 0 1rem 2rem;

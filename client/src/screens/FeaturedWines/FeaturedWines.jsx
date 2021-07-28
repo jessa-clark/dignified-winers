@@ -5,7 +5,7 @@ import { sort } from "../../utils/sort"
 import "./FeaturedWines.css"
 import FeaturedCard from "../../components/Featured/FeaturedCard";
 
-const FeaturedWines = (props) => {
+const FeaturedWines = () => {
   const [sortedArray, setSortedArray] = useState([]);
 
 
