@@ -2,7 +2,6 @@ import Layout from "../../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import { getWines } from "../../services/wines";
 import { sort } from "../../utils/sort"
-import { Link } from "react-router-dom";
 import "./FeaturedWines.css"
 import FeaturedCard from "../../components/Featured/FeaturedCard";
 

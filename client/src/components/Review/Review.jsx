@@ -1,5 +1,5 @@
 import Rating from "../Rating/Rating";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import "./Review.css";
 import { editWine } from "../../services/wines";
@@ -8,7 +8,7 @@ const Review = (props) => {
   const { author, rating, description, _id } = props.review;
   const { wine, setToggleFetch, user } = props
 
-  const history = useHistory();
+
   const { id } = useParams();
 
   const deleteReview = (e) => {
@@ -35,7 +35,7 @@ const Review = (props) => {
       <h3>{author}</h3>
       <Rating className="review-rating" rating={rating} />
       <p>{description}</p>
-      {user.username === author ? <button className="review-wine-delete-button" onClick={deleteReview}>
+      {user === author ? <button className="review-wine-delete-button" onClick={deleteReview}>
         Delete
       </button> : <></>}
     </article>
