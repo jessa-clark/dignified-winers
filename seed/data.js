@@ -30,7 +30,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "Pedropapablo",
-          rating: 4.5,
+          rating: 4,
           description: "Muy buen sabor final",
         },
         {
@@ -54,7 +54,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "Kmcdonald",
-          rating: 4.7,
+          rating: 4,
           description: "Powerful, forward fruit has a massive burst of energy to start with sensational spice to follow.",
         },
         {
@@ -64,7 +64,7 @@ const insertData = async () => {
         },
         {
           author: "MrHeo",
-          rating: 4.3,
+          rating: 4,
           description: "i feel like BDM. anyway, SNQ is always good",
         },
       ],
@@ -83,7 +83,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "aFernandez",
-          rating: 4.5,
+          rating: 4,
           description: "Apples. Pear. Some Vanilla and butter on the finish but it’s moderate. Acidity is perfect. Oak Balanced Chardonnay thanks to the acidity and low oak. Love but too expensive for price point imo. Other good comparables for $10 less",
         },  {
           author: "mishel",
@@ -114,7 +114,7 @@ const insertData = async () => {
           description: "Nice. Had it in mexico. Resort nizuc. Paired with great atmosphere happy b day. Live large. Be well.",
         },  {
           author: "neophytidius",
-          rating: 4.3,
+          rating: 4,
           description: "Had the privilege to try Screaming Eagle 2012. Nose was full of black fruit and red fruit and lots of spice and tobacco. Palate was outstanding with great structure and finish. Worths every penny",
         }
       ],
@@ -133,7 +133,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "solomonjoel",
-          rating: 4.5,
+          rating: 4,
           description: "Deep, dark yummy rich wine. Agree with other comments that this cab was meant to be consumed with red meat. Plenty of room to age.",
         },  {
           author: "stueveve",
@@ -141,7 +141,7 @@ const insertData = async () => {
           description: "Maybe a new favorite. Well balanced with perfect oaky notes. Beautiful dark plum and red currant with slight vanilla tones. Super smooth start to finish.",
         },  {
           author: "lofgren",
-          rating: 4.3,
+          rating: 4,
           description: "Not familiar with American wines (yet) but I can sense this is a great one. Ruby red color, BIG but smooth. Much sensations on the noose, I find oak, vanilla, strawberry jam, dark chocolate, bell pepper, sweet licorice, eucalyptus, hints of coffee beans Smoother taste, cherry, boysenberry, tobacco, long aftertaste of cacao Tasted it 2 days later, a lot of eucalyptus has emerged.",
         },
       ],
@@ -160,7 +160,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "blagovest",
-          rating: 4.2,
+          rating: 4,
           description: "Compacted and thick with caressing and polished tannins that are powerful yet refined. Super concentration yet agile and energetic.",
         },  {
           author: "kirilov",
@@ -195,7 +195,7 @@ const insertData = async () => {
           description: "Nice wine but outshone by some other producers like peay.",
         },  {
           author: "McMcCarter",
-          rating: 4.5,
+          rating: 4,
           description: "Delicious red berries and dry finish",
         },
       ],
@@ -214,7 +214,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "bobenslein",
-          rating: 4.5,
+          rating: 4,
           description: "So well made. Elegant and unfolding, hints of oak, vanilla and cream...yet keeping the acidity balance and hints of citrus.",
         },  {
           author: "teamjarvis",
@@ -237,7 +237,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "arivera",
-          rating: 4.2,
+          rating: 4,
           description: "I buy a case every year. Expensive, but excellent. Dark color, wonderful blackberry flavor, simultaneously smooth and complex.",
         },  {
           author: "tuckmemmoore",
@@ -245,7 +245,7 @@ const insertData = async () => {
           description: "2018 vintage. 4.6 Probably too early to open this one but fantastic in any case! Very silky feel, soft dark fruit, sharp pencil lead, lingering finish.",
         },  {
           author: "shtraus",
-          rating: 3.7,
+          rating: 3,
           description: "Nose is burgeoning with raspberry and blackberry components, a touch of oak. The palate is full of dark fruit. Young tannins. A fantastic effort.",
         },
       ],
@@ -272,7 +272,7 @@ const insertData = async () => {
           description: "hahaaha.. thank you dad",
         },  {
           author: "amarella",
-          rating: 2,
+          rating: 5,
           description: "Had at crusader event! Amazaing !!!",
         },
       ],
@@ -345,7 +345,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "abrahamNOTlincoln",
-          rating: 4.5,
+          rating: 4,
           description: "blackberry vanilla oak leather chocolate plum cherry black fruit tobacco blackcurrant cassis jam black olive mulberry wild blueberry",
         },  {
           author: "polyakayak",
@@ -353,7 +353,7 @@ const insertData = async () => {
           description: "Fantastic wine! Explosion of intense fruit flavor-- blueberry, currant and plum, with notes of cocoa and #2 lead pencil. Balanced with solid tannins.",
         },  {
           author: "mishel",
-          rating: 3.7,
+          rating: 3,
           description: "My wife told me go buy a bottle of wine, but maybe a 6 liter Grange was not what she ment. Besides, she would quickly discover the price, nah better skip it today.",
         },
       ],
@@ -376,11 +376,11 @@ const insertData = async () => {
           description: "Very oaky and full of complexity. Butter, vanilla and some citrus notes such as lemon and grapefruit. A refined and interesting wine.",
         },  {
           author: "ycboey",
-          rating: 3.5,
+          rating: 3,
           description: "Great nose..Crisp citrus at the beginning with a robust body and light layers of butter oak vanilla, Almonds..minerals.. very decent..",
         },  {
           author: "hahahovel",
-          rating: 3.9,
+          rating: 3,
           description: "Nose of green apple, lemon, vanilla, hazelnut. A little bit of creaminess, but nice acidity and balance. Tastes lighter and brighter than Napa Chardonnay. A bit fruity in the flavor, with a bit of acidity Spends time on its fine lees,",
         },
       ],
@@ -399,7 +399,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "abrahamNOTlincoln",
-          rating: 4.5,
+          rating: 4,
           description: "cherry earthy leather oak tobacco plum mushroom raspberry red fruit licorice minerals balsamic tar cocoa forest floor truffle underbrush new leather graphite ginger game iron saline black truffle",
         },  {
           author: "overthevineyard",
@@ -426,7 +426,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "craigmeister",
-          rating: 4.6,
+          rating: 4,
           description: "Truly and experience. Intense powerful flavors. Rich nose with balance of sweet and savory flavors. Though some fruit was present this wine was more about savory flavors. Stone, blood, leather , black pepper. Went perfect with a grilled lamb leg. An unforgettable wine.",
         },  {
           author: "sam",
@@ -475,7 +475,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "kirilov",
-          rating: 4.5,
+          rating: 4,
           description: "Complex textures and a beautiful richness, but at the same time, bright energy carries lime zest and tart nectarine flavors layered with white blossoms and a resiny herbal quality.",
         },  {
           author: "cappysinclair",
@@ -483,7 +483,7 @@ const insertData = async () => {
           description: "Amazing SB, great acidity, pale color, full citrus notes, with oak in the background, need to find more!",
         },  {
           author: "boydontudare",
-          rating: 3.9,
+          rating: 3,
           description: "Excellent Chardonnay. Dry with a tart citrus fruit core. Slight oak tone to finish",
         },
       ],
@@ -502,7 +502,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "blagovest",
-          rating: 4.5,
+          rating: 4,
           description: "Elegant structure and vibrant energy carry a mix of earthy mushroom, leather, herb and spice notes, along with tangy red and black fruit.",
         },  {
           author: "rocksterz",
@@ -510,7 +510,7 @@ const insertData = async () => {
           description: "Stunning! Silky soft and smooth tannins with red fruit aroma and leathery undertones. Super well balanced!",
         },  {
           author: "mrgreen",
-          rating: 3.9,
+          rating: 3,
           description: "Moderate aromas of baking spices and dark cherry. Clingy tannins that are well structured and balanced. Nice long finish. I think this is a very good wine that years will be great!",
         },
       ],
@@ -529,7 +529,7 @@ const insertData = async () => {
       reviews: [
         {
           author: "McMcCarter",
-          rating: 4.5,
+          rating: 4,
           description: "Black fruit crazy. All sorts of balanced from earth to tannin's to color to boldness. A special wine for very special occasions.",
         },  {
           author: "kirilov",
