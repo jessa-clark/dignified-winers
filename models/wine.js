@@ -24,9 +24,9 @@ const Wine = new Schema(
 Wine.virtual("rating").get(function () {
   //taking average of reviews
   return (
-    this.reviews.reduce((total, review) => total + review.rating, 0) /
+    Math.ceil(this.reviews.reduce((total, review) => total + review.rating, 0) /
     this.reviews.length
-  );
+  ));
 });
 
 export default mongoose.model("wines", Wine);

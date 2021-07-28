@@ -31,6 +31,8 @@ const WineDetail = (props) => {
   const history = useHistory();
   const { id } = useParams();
 
+
+
   useEffect(() => {
     const fetchWine = async () => {
       const wine = await getOneWine(id);
@@ -59,6 +61,7 @@ const WineDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
