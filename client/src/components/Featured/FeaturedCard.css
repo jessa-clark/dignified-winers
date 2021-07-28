@@ -17,3 +17,33 @@
   width: 40%;
   color: white;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .featured-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  .featured-card-image {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .featured-card-text {
+    width: 80%;
+    line-height: 2rem;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    row-gap: 30px;
+    text-align: center;
+  }
+
+}

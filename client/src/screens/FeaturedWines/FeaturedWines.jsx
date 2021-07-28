@@ -2,6 +2,7 @@ import Layout from "../../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import { getWines } from "../../services/wines";
 import { sort } from "../../utils/sort"
+import { Link } from "react-router-dom";
 import "./FeaturedWines.css"
 import FeaturedCard from "../../components/Featured/FeaturedCard";
 
@@ -16,10 +17,21 @@ const FeaturedWines = (props) => {
     };
     getResults();
   }, []);
-  console.log(sortedArray)
+
+
   return (
     <Layout>
-      <div className="image-container-top-5">
+      <div className="image-container-top-five">
+        <div className="top-five-image">
+          <img src="/img/Topfive.jpg" alt="top five trophy"/>
+        </div>
+        <div className="top-five-intro">
+          <div className="top-five-text">
+          <h3>You ranked them, we tested them.</h3>
+          <br />
+          <h3>Presenting the Winer Community top 5!</h3>
+          </div>
+        </div>
       </div>
       <div className="featured-wines">
         {sortedArray.length ? (

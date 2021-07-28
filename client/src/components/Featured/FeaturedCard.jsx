@@ -1,11 +1,13 @@
 import React from 'react'
 import Rating from "../Rating/Rating";
+import { Link } from 'react-router-dom';
 import "./FeaturedCard.css"
 
 
 const FeaturedCard = (props) => {
-  const { rating, imgURL, name, description } = props.review;
+  const { rating, imgURL, name, description, id } = props.review;
   return (
+    <Link to={`/wines/${id}`}>
     <article className="featured-card">
       <img src={imgURL} alt="featured wine" className="featured-card-image"/>
       <div className="featured-card-text">
@@ -14,6 +16,7 @@ const FeaturedCard = (props) => {
       <p>{description}</p>
       </div>
     </article>
+    </Link>
   );
 };
 
