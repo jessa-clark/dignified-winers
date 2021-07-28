@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Wine.css";
 
 const Wine = (props) => {
-  const { _id, name, vineyard, imgURL, year } = props.wine;
+  const { _id, imgURL, name, vineyard, year} = props.wine;
   return (
     <Link className="wine" to={`/wines/${_id}`}>
       <article>

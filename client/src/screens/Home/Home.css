@@ -1,4 +1,4 @@
-/* landing */
+
 .landing-section {
   height: 90vh;
   width: 100vw;
@@ -7,6 +7,9 @@
   background: url("./NewHomeBanner3.png") no-repeat center;
   background-size: cover;
   /* background url will have to change based on responsiveness */
+}
+.landing-container {
+  width: 100vw;
 }
 
 .landing-button {
@@ -43,10 +46,8 @@
   background-color: transparent;
 }
 
-/* who */
 .who-section,
 .winner-section {
-  /* height: 40vh; */
   margin-top: 8rem;
 }
 .who-container {
@@ -54,7 +55,6 @@
   width: 70vw;
 }
 .who-image {
-  /* width: 50%; */
   overflow: hidden;
 }
 .who-image img {
@@ -69,25 +69,27 @@
 }
 .who-content-text {
   font-size: 1.3rem;
- }
+}
 
- /* winner */
- .winner-wines-container {
-color: white;
-text-align: center;
-/* margin-top: 2rem; */
-margin-bottom: 4rem;
-} 
+.winner-wines-container {
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+}
 .winner-wines-title {
   font-size: 2rem;
 }
 .winner-wines-text {
-   width: 70vw;
+  width: 70vw;
   font-size: 1.3rem;
   margin: 0 auto;
- }
- /* winner + community button */
- .who-button, .community-button {
+}
+.caro {
+  height: 55vh;
+}
+
+.who-button,
+.community-button {
   height: 2.5rem;
   width: 17rem;
 
@@ -99,7 +101,6 @@ margin-bottom: 4rem;
   text-align: center;
 }
 
-/* community */
 .community-section {
   height: 90vh;
   width: 100vw;
@@ -124,18 +125,16 @@ margin-bottom: 4rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding: 0 2rem;
   margin: 2rem auto;
 }
 
 .community-text {
   width: 60vw;
-  padding: 2rem 0;
+  padding: 2rem;
   margin: 4rem 0;
   align-self: center;
-
-  /* background-color: rgba(255,255,255, 0.23); */
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   font-size: 1.3rem;
@@ -144,7 +143,6 @@ margin-bottom: 4rem;
   align-self: center;
 }
 
-/* carousel */
 .carousel-row {
   display: flex;
   margin: 2rem auto;
@@ -165,6 +163,52 @@ margin-bottom: 4rem;
  height: 5rem; 
  margin: auto;
 } */
+.landing-container h2 {
+  transform: scale(2.4);
+  animation: scaleDownHeadingOnLoad 1s ease forwards;
+}
+
+.landing-container button,
+.landing-section button {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: 1s slideUpSubheadingOnLoad 1s ease forwards;
+}
+
+/* the following snippet is a courtesy of Conrad Trost (https://trost.dev/).
+very sexy addition to the app, thank you conrad */
+@keyframes scaleDownHeadingOnLoad {
+  0% {
+    transform: scale(2.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpSubheadingOnLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .landing-section {
+    transform: scale(2.4);
+    transform: translateY(60px);
+    animation: scaleDownHeadingOnLoad 1s ease forwards;
+  }
+  .who-content-title {
+    margin-bottom: 4rem;
+  }
+  .who-content-text {
+    line-height: 2;
+  }
+}
 
 @media screen and (max-width: 1025px) {
   .landing-section {

@@ -9,12 +9,14 @@ const Sort = (props) => {
 
   return (
     <aside className="sort-dropdown">
+      <div className="select-wrapper">
       <select name="sort" id="sort" onChange={handleChange}>
         <option value="">Sort By</option>
         <option value="alphabetical">Alphabetical</option>
         <option value="year">Year</option>
         <option value="date-added">Date Added</option>
       </select>
+      </div>
     </aside>
   );
 };

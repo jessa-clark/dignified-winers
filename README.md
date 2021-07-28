@@ -19,7 +19,7 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 - Navbar displays logo, name and links to browse wines and to signup/signin.
 - Home page with about section, carousel displaying wines and section for the option to join the community.
 - Display all wines page with the option to search wines by name and click on wine to learn more detail.
-- Detail page with chosen wine information. Includes picture of wine, name of wine, vineyard, year and description.
+- Detail page with chosen wine information. Includes picture of wine, name of wine, vineyard, year, type and description.
 - Detail page with related wines suggestion.
 - Detail page will have the option to edit and delete post if the user is a part of the Winer community.
 - Submission form where only logged in users have the ability to submit their favorite wine.
@@ -31,9 +31,11 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 
 #### PostMVP
 
-- Sort by and Filter by on display all wines page.
-- Top 10 "featured" wines list
-- live preview of info to be posted on the user submission form and edit form.
+- Sort by feature on all wines page.
+- Top 5 "featured" wines list
+- add review functionality
+- add hamburger menu for mobile
+- animations to home page
 
 ## Project Schedule
 
@@ -44,9 +46,9 @@ Dignified Winers is a full-stack CRUD application using MongoDB, Express.js, Rea
 | July 21 | Front-End Skeleton PP / React Component Skeletons             | Complete |
 | July 22 | React Component Conclusion With CRUD / CSS Components         | Complete |
 | July 23 | MVP Desktop Designs / Deploy Desktop Site / Responsive Design | Complete |
-| July 26 | Finalize Responsive Resign / Post MVP(separate branch)        | To Do    |
-| July 27 | Advanced CSS / Final Touches / Post MVP Completion            | To Do    |
-| July 28 | Presentations                                                 | To Do    |
+| July 26 | Finalize Responsive Resign / Post MVP(separate branch)        | Complete |
+| July 27 | Advanced CSS / Final Touches / Post MVP Completion            | Complete |
+| July 28 | Presentations                                                 | Complete |
 
 ## Team Expectations
 

@@ -12,7 +12,9 @@ const WineAdd = (props) => {
     year: "",
     imgURL: "",
     description: "",
-    type: "",
+    type: "red",
+    userId: props.user.id,
+    reviews: []
   });
 
   const [isCreated, setCreated] = useState(false);
@@ -34,10 +36,13 @@ const WineAdd = (props) => {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const created = await addWine(wine);
-    setCreated({ created });
+    const createWine = async () => {
+      const created = await addWine(wine);
+      setCreated({ created });
+    }
+    createWine();
   };
 
   if (isCreated) {
