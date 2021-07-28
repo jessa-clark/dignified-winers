@@ -45,9 +45,3 @@ export const deleteWine = async (id) => {
   }
 };
 
-// export const addReview = async (id, wine) => {
-//   try {
-//     const res= await api.put(`/wines/${id}`);
-//     return 
-//   }
-// }
